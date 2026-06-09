@@ -2734,7 +2734,6 @@ export const blogPosts = [
     `
   },
   {
-<<<<<<< HEAD
     slug: "bilateral-total-knee-replacement",
     title: "Bilateral Total Knee Replacement: What Patients in Bengaluru Need to Know Before Deciding",
     excerpt: "Considering bilateral total knee replacement in Bengaluru? Dr. Nitin N Sunku explains the procedure, simultaneous vs. staged options, recovery timeline, risks, and who is the right candidate.",
@@ -3471,8 +3470,8 @@ export const blogPosts = [
       
       <p><em>About the Author<br/>Dr. Nitin N Sunku is a fellowship-trained Orthopedic and Sports Medicine Surgeon, MBBS and MS Orthopedics (Gold Medalist), with specialist fellowship training in arthroscopy and sports medicine. He is the Team Doctor for Bengaluru FC and a visiting consultant at Narayana Hrudayalaya and Manipal Hospital. He consults at Raghava Multispeciality Hospital, Attibele, and Health Nest Hospital, HSR Layout, Bengaluru. To book a consultation, call +91-9980031006 or visit drnitinsunkuortho.com/contact.</em></p>
     `
-  }
-=======
+  },
+  {
     slug: "red-light-therapy-for-acl-tear",
     title: "Red Light Therapy for ACL Tear: What the Evidence Says and How It Fits Your Recovery",
     excerpt: "Does red light therapy (photobiomodulation) actually help an ACL tear? An evidence-based look at mechanism, timing, dosing, and how it fits into structured ACL rehabilitation in Bengaluru.",
@@ -4058,5 +4057,4 @@ export const blogPosts = [
     `
   },
   ...treatmentClusterPosts,
->>>>>>> 594ea7dd646e796c3b04e8ab304a3083d75fcf8e
 ];
