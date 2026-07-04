@@ -12,8 +12,13 @@ import { siteOrigin } from "@/lib/site-url";
 import { FadeIn } from "@/components/animations/fade-in";
 
 export const metadata: Metadata = {
-  title: "Dr. Nitin N Sunku | Orthopedic & Sports Medicine Specialist",
-  description: "Consult Dr. Nitin N Sunku, trusted orthopedic & sports medicine surgeon for joint pain, fractures, ligament injuries and advanced orthopedic care.",
+  // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
+  // template (which would otherwise render the brand twice). The homepage
+  // title now leads with the primary local keyword — "orthopedic doctor in
+  // Bangalore" — which was previously absent from the site's most
+  // authoritative page.
+  title: { absolute: "Orthopedic Doctor in Bangalore — Attibele & HSR Layout | Dr. Nitin N Sunku" },
+  description: "Dr. Nitin N Sunku — fellowship-trained orthopedic & sports medicine doctor in Bangalore. Clinics in Attibele & HSR Layout. Knee, shoulder, spine & sports injury care. Same-day appointments.",
   alternates: { canonical: `${siteOrigin}/` },
 };
 

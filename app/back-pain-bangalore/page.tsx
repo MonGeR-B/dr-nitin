@@ -38,9 +38,12 @@ import {
     LandingFooter,
     HeroImage,
 } from "@/components/landing/landing-chrome";
+import { LandingFaq } from "@/components/landing/landing-faq";
 
 export const metadata: Metadata = {
-    title: "Back Pain & Spine Specialist Bangalore | Dr. Nitin Sunku",
+    // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
+    // template — without it the live <title> renders the brand twice.
+    title: { absolute: "Back Pain & Spine Specialist Bangalore | Dr. Nitin Sunku" },
     description:
         "Conservative-first back pain & spine specialist in Bangalore. Most disc problems resolve without surgery. Honest second opinions. Same-day appointments.",
     alternates: { canonical: `${siteOrigin}/back-pain-bangalore` },
@@ -528,6 +531,39 @@ export default function BackPainBangalorePage() {
                 primaryId={CLINIC.id}
                 heading="Visit Us — Two Convenient Locations"
                 subheading="Back pain & spine care in HSR Layout and Attibele, Bengaluru."
+            />
+
+            <LandingFaq
+                pageName="Back Pain & Spine Specialist in Bangalore"
+                pagePath="/back-pain-bangalore"
+                aboutCondition="Back pain"
+                subheading="Straight answers about back pain, sciatica, and when surgery is actually needed."
+                items={[
+                    {
+                        q: "Does a slipped disc always need surgery?",
+                        a: "No. The large majority of lumbar disc herniations improve with structured non-surgical care — physiotherapy, medication, activity modification, and in some cases an image-guided injection. Surgery is considered when there are red flags (progressive weakness, bladder or bowel symptoms) or when a properly executed conservative plan has plateaued.",
+                    },
+                    {
+                        q: "When should I see a doctor for back pain instead of waiting it out?",
+                        a: "See a specialist promptly if pain persists beyond 2–3 weeks, radiates down the leg (sciatica), follows an injury or fall, wakes you at night, or comes with numbness, weakness, fever, or unexplained weight loss. Sudden loss of bladder or bowel control is an emergency — go to a hospital immediately.",
+                    },
+                    {
+                        q: "What does a back pain consultation cost in Bangalore?",
+                        a: "A consultation with Dr. Nitin N Sunku typically costs ₹500–₹1,000, which includes clinical examination and a written treatment plan. Imaging (X-ray or MRI) is advised only when it would change the plan, and costs are discussed transparently before anything is ordered.",
+                    },
+                    {
+                        q: "Do you give second opinions on spine surgery recommendations?",
+                        a: "Yes — second opinions are a significant part of the practice. Bring your MRI and previous prescriptions. You will get an honest assessment of whether surgery is genuinely indicated or whether a structured non-surgical plan is worth completing first.",
+                    },
+                    {
+                        q: "Where can I consult for back pain near Electronic City or HSR Layout?",
+                        a: "Dr. Nitin consults at Raghava Multispeciality Hospital in Attibele (convenient for Electronic City, Bommasandra, Chandapura, Anekal and Hosur Road) and at Health Nest Hospital in HSR Layout. Same-day appointments are usually available at both locations.",
+                    },
+                    {
+                        q: "What non-surgical treatments are available for sciatica?",
+                        a: "Depending on the diagnosis: structured physiotherapy with progression milestones, short-term medication, posture and ergonomic correction, and image-guided epidural or transforaminal injections for persistent nerve-root pain. Most sciatica improves within 6–12 weeks on this pathway.",
+                    },
+                ]}
             />
 
             <FinalCtaStrip

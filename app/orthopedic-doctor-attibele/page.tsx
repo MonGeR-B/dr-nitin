@@ -38,9 +38,12 @@ import {
     LandingFooter,
     HeroImage,
 } from "@/components/landing/landing-chrome";
+import { LandingFaq } from "@/components/landing/landing-faq";
 
 export const metadata: Metadata = {
-    title: "Orthopedic Doctor in Attibele, Bengaluru | Dr. Nitin Sunku",
+    // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
+    // template — without it the live <title> renders the brand twice.
+    title: { absolute: "Orthopedic Doctor in Attibele, Bengaluru | Dr. Nitin Sunku" },
     description:
         "Fellowship-trained orthopedic & sports medicine specialist at Raghava Hospital, Attibele. Serving Anekal, Bommasandra, Hosur Rd, Electronic City. Book today.",
     alternates: { canonical: `${siteOrigin}/orthopedic-doctor-attibele` },
@@ -602,6 +605,38 @@ export default function OrthopedicDoctorAttibelePage() {
                     </div>
                 </div>
             </section>
+
+            <LandingFaq
+                pageName="Orthopedic Doctor in Attibele, Bengaluru"
+                pagePath="/orthopedic-doctor-attibele"
+                subheading="Practical answers about consulting Dr. Nitin at Raghava Multispeciality Hospital, Attibele."
+                items={[
+                    {
+                        q: "Where exactly is the Attibele orthopedic clinic located?",
+                        a: "At Raghava Multispeciality Hospital, 39, Sarjapura–Attibele Road, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru 562107 — a short turn off the Bengaluru–Hosur (NH 44) highway, with on-site parking.",
+                    },
+                    {
+                        q: "What are the consultation timings at Attibele?",
+                        a: "Monday to Saturday, 10:00 AM – 6:00 PM. Same-day and walk-in slots are available most days, and the hospital runs a 24/7 emergency department for fractures and acute injuries. Call +91-9980031006 to confirm a slot.",
+                    },
+                    {
+                        q: "Do patients from Electronic City and Sarjapur Road come to Attibele?",
+                        a: "Yes — Electronic City is about a 20-minute drive via the Hosur Road elevated expressway, and Sarjapura is roughly 25 minutes. Many patients from Anekal, Chandapura, Bommasandra, Jigani and Hosur choose Attibele over driving 30 km into central Bengaluru.",
+                    },
+                    {
+                        q: "What orthopedic services are available at Raghava Hospital, Attibele?",
+                        a: "Consultation and diagnosis for knee, shoulder, hip, spine and sports injuries; fracture and trauma care; arthroscopy and joint replacement surgery; regenerative injections (PRP, GFC, hyaluronic acid); pediatric orthopedics; and post-operative rehabilitation — all within one hospital with in-house imaging and operating theatre.",
+                    },
+                    {
+                        q: "How much does an orthopedic consultation cost in Attibele?",
+                        a: "Typically ₹500–₹1,000, including clinical examination and a written treatment plan. Health insurance is accepted for procedures, and the hospital team assists with pre-authorisation paperwork.",
+                    },
+                    {
+                        q: "Do I need a referral or prior appointment to see Dr. Nitin?",
+                        a: "No referral is needed. Walk-ins are accepted most days, though booking by phone, WhatsApp, or the form on this page is recommended to minimise waiting. For emergencies like fractures, the hospital's casualty accepts patients 24/7.",
+                    },
+                ]}
+            />
 
             <FinalCtaStrip
                 clinic={CLINIC}

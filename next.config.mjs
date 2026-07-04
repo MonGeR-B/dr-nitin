@@ -19,12 +19,23 @@ const nextConfig = {
     },
     async redirects() {
         return [
-            // Old single-clinic ad landing page → new dual-clinic landing page.
-            // 301 (permanent) so existing Google/Meta ad URLs, backlinks, and
-            // any indexed entries transfer ranking signals to the new slug.
+            // Old single-clinic ad landing page → the Attibele landing page.
+            // Previously this pointed at /orthopedic-doctor-in-hsr-layout, which
+            // sent Attibele-intent signals (ads, backlinks, indexed entries) to
+            // the wrong locality page. /orthopedic-doctor-attibele now exists
+            // and is the correct 301 target.
             {
                 source: '/orthopedic-attibele',
-                destination: '/orthopedic-doctor-in-hsr-layout',
+                destination: '/orthopedic-doctor-attibele',
+                permanent: true,
+            },
+            // Legacy WordPress-era URL still indexed in Google (confirmed via
+            // SERP) that currently 404s and leaks link equity. Next.js matches
+            // with or without trailing slash. Add more entries here as the GSC
+            // "Not found (404)" report surfaces additional legacy paths.
+            {
+                source: '/why-are-sports-injuries-so-common',
+                destination: '/blog/why-are-sports-injuries-so-common-and-how-do-we-treat-them',
                 permanent: true,
             },
         ];

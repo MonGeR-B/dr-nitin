@@ -34,9 +34,12 @@ import {
     LandingFooter,
     HeroImage,
 } from "@/components/landing/landing-chrome";
+import { LandingFaq } from "@/components/landing/landing-faq";
 
 export const metadata: Metadata = {
-    title: "Sports Injury Doctor Bangalore | Dr. Nitin N Sunku",
+    // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
+    // template — without it the live <title> renders the brand twice.
+    title: { absolute: "Sports Injury Doctor Bangalore | Dr. Nitin N Sunku" },
     description:
         "Sports injury specialist in Bangalore & official Bengaluru FC team doctor. ACL, meniscus, shoulder & ankle care. Same-day appointments — book now.",
     alternates: { canonical: `${siteOrigin}/sports-injury-doctor-bangalore` },
@@ -500,6 +503,39 @@ export default function SportsInjuryDoctorBangalorePage() {
                 primaryId={CLINIC.id}
                 heading="Visit Us — Two Convenient Locations"
                 subheading="Sports injury care in HSR Layout and Attibele, Bengaluru."
+            />
+
+            <LandingFaq
+                pageName="Sports Injury Doctor in Bangalore"
+                pagePath="/sports-injury-doctor-bangalore"
+                aboutCondition="Sports injury"
+                subheading="Straight answers about ACL tears, return-to-play, and sports injury treatment."
+                items={[
+                    {
+                        q: "Does an ACL tear always need surgery?",
+                        a: "No. The decision depends on your age, activity level, degree of instability, and associated injuries. Recreational athletes with a stable knee can sometimes do well with structured rehabilitation alone. Competitive athletes and unstable knees usually benefit from arthroscopic reconstruction. You'll get an honest recommendation, not a default to surgery.",
+                    },
+                    {
+                        q: "How soon after a sports injury should I see a doctor?",
+                        a: "Within a few days if there was swelling, a 'pop', instability, locking, or inability to bear weight. Early accurate diagnosis prevents small injuries from becoming chronic problems and shortens overall recovery time.",
+                    },
+                    {
+                        q: "How long before I can return to sport after ACL surgery?",
+                        a: "Most athletes return to full competitive sport in 8–12 months after ACL reconstruction, following a criteria-based rehab protocol — not just a calendar. Lighter activities like straight-line jogging typically resume around 3–4 months, guided by strength and stability milestones.",
+                    },
+                    {
+                        q: "Is the same care available for amateur and weekend athletes?",
+                        a: "Yes. As official team doctor for Bengaluru FC, Dr. Nitin applies the same diagnostic standards, imaging protocols and return-to-play criteria used for professional footballers to weekend runners, gym-goers and school athletes.",
+                    },
+                    {
+                        q: "What does sports injury treatment cost in Bangalore?",
+                        a: "Consultation is typically ₹500–₹1,000. Costs for arthroscopy or ligament reconstruction depend on the injury and hospital, are discussed transparently before any decision, and are widely covered by health insurance. Insurance assistance is available at both clinics.",
+                    },
+                    {
+                        q: "Where can I consult a sports injury specialist in South Bengaluru?",
+                        a: "At Raghava Multispeciality Hospital, Attibele (convenient for Electronic City, Sarjapur Road and Hosur Road) and Health Nest Hospital, HSR Layout. Same-day appointments are usually available — call or WhatsApp to confirm a slot.",
+                    },
+                ]}
             />
 
             <FinalCtaStrip

@@ -32,9 +32,12 @@ import {
     LandingFooter,
     HeroImage,
 } from "@/components/landing/landing-chrome";
+import { LandingFaq } from "@/components/landing/landing-faq";
 
 export const metadata: Metadata = {
-    title: "Knee Pain Specialist Bangalore | Dr. Nitin N Sunku",
+    // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
+    // template — without it the live <title> renders the brand twice.
+    title: { absolute: "Knee Pain Specialist Bangalore | Dr. Nitin N Sunku" },
     description:
         "Knee pain specialist in Bangalore (HSR Layout & Attibele). Conservative-first care, PRP, arthroscopy & knee replacement. Book a same-day consultation.",
     alternates: { canonical: `${siteOrigin}/knee-pain-bangalore` },
@@ -443,6 +446,39 @@ export default function KneePainBangalorePage() {
                 primaryId={CLINIC.id}
                 heading="Visit Us — Two Convenient Locations"
                 subheading="Expert knee care in HSR Layout and Attibele, Bengaluru."
+            />
+
+            <LandingFaq
+                pageName="Knee Pain Specialist in Bangalore"
+                pagePath="/knee-pain-bangalore"
+                aboutCondition="Knee pain"
+                subheading="Straight answers about knee pain treatment, costs, and when surgery is actually needed."
+                items={[
+                    {
+                        q: "How much does a knee consultation cost in Bangalore?",
+                        a: "A consultation with Dr. Nitin N Sunku typically costs ₹500–₹1,000, including clinical examination and a written treatment plan. Injections like PRP (₹10,000–₹20,000) or hyaluronic acid (₹5,000–₹15,000) are discussed only if they are the right option for your knee.",
+                    },
+                    {
+                        q: "Can knee pain be treated without surgery?",
+                        a: "Very often, yes. Most knee pain — early osteoarthritis, tendon problems, minor meniscus tears, runner's knee — responds to structured physiotherapy, weight management, activity modification, and regenerative injections such as PRP or GFC. Surgery is recommended only when conservative options have been properly tried or the diagnosis clearly requires it.",
+                    },
+                    {
+                        q: "Do PRP and GFC injections actually work for knee arthritis?",
+                        a: "For the right patient — typically early to moderate osteoarthritis — PRP and GFC can meaningfully reduce pain and improve function for months at a time. They are not a cure and won't regrow cartilage, and Dr. Nitin will tell you honestly if your knee has progressed beyond the stage where injections help.",
+                    },
+                    {
+                        q: "When does a knee actually need replacement surgery?",
+                        a: "When advanced arthritis causes daily pain, night pain, and shrinking walking distance despite physiotherapy, medication and injections. Knee replacement in Bangalore typically costs ₹2.5–5 lakh and is widely covered by insurance. It's step five of the plan — not step one.",
+                    },
+                    {
+                        q: "Where can I see a knee specialist near Electronic City or HSR Layout?",
+                        a: "Dr. Nitin consults at Raghava Multispeciality Hospital in Attibele (about 20 minutes from Electronic City via Hosur Road) and at Health Nest Hospital in HSR Layout, Sector 2. Same-day appointments are usually available at both clinics.",
+                    },
+                    {
+                        q: "Is an MRI necessary before seeing a knee doctor?",
+                        a: "No — come in first. A careful history and physical examination determine whether imaging is needed at all. Ordering an MRI before clinical assessment often wastes money and can surface incidental findings that cause unnecessary worry.",
+                    },
+                ]}
             />
 
             <FinalCtaStrip

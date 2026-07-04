@@ -14,7 +14,7 @@ const GOOGLE_ADS_CONVERSION =
     "AW-11392406445/G95dCKqvm8gZEK2nqbgq";
 
 export const metadata: Metadata = {
-    title: "Thank You | Dr. Nitin N Sunku",
+    title: { absolute: "Thank You | Dr. Nitin N Sunku" },
     description: "Thank you for reaching out to Dr. Nitin N Sunku. We have received your message and will get back to you shortly.",
     alternates: { canonical: `${siteOrigin}/thank-you` },
     robots: { index: false, follow: true },

@@ -3,6 +3,21 @@ import { servicesData, blogPosts } from '@/lib/data'
 import { treatments } from '@/lib/treatments'
 import { siteOrigin } from '@/lib/site-url'
 
+// Stable lastModified for routes without their own date. Previously every URL
+// used `new Date()`, so every build claimed the entire site had just changed —
+// Google learns to distrust and ignore lastmod when it's always "now".
+// Bump this date only when site-wide content genuinely changes.
+const SITE_CONTENT_UPDATED = new Date('2026-07-04')
+
+/** Parse blog-post display dates like "Mar 2, 2026"; fall back to the site date. */
+function postDate(dateStr?: string): Date {
+    if (dateStr) {
+        const parsed = new Date(dateStr)
+        if (!Number.isNaN(parsed.getTime())) return parsed
+    }
+    return SITE_CONTENT_UPDATED
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = siteOrigin
 
@@ -40,28 +55,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const routes = staticRoutes.map(({ path, priority }) => ({
         url: `${baseUrl}${path}`,
-        lastModified: new Date(),
+        lastModified: SITE_CONTENT_UPDATED,
         changeFrequency: 'monthly' as const,
         priority,
     }))
 
     const serviceRoutes = servicesData.map((service) => ({
         url: `${baseUrl}/services/${service.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
+        lastModified: SITE_CONTENT_UPDATED,
+        changeFrequency: 'monthly' as const,
         priority: 0.8,
     }))
 
     const treatmentRoutes = treatments.map((treatment) => ({
         url: `${baseUrl}/treatments/${treatment.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
+        lastModified: SITE_CONTENT_UPDATED,
+        changeFrequency: 'monthly' as const,
         priority: 0.9,
     }))
 
     const blogRoutes = blogPosts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(),
+        lastModified: postDate((post as { date?: string }).date),
         changeFrequency: 'monthly' as const,
         priority: 0.7,
     }))
