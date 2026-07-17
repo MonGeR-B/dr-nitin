@@ -1257,7 +1257,7 @@ For accurate diagnosis and treatment, visit Dr Nitin Sunku, Orthopedic Doctor an
 
 **Published:** Jul 17, 2026
 
-**Source:** https://drnitinsunkuortho.com/blog/slap-tear-shoulder-surgery-recovery-dos-and-donts-timeline-guide/
+**Source:** https://drnitinsunkuortho.com/blog/slap-tear-shoulder-surgery-recovery-dos-and-donts/
 
 # SLAP Tear Shoulder Surgery Recovery: Do's and Don't (Complete Timeline Guide)
 
@@ -1405,7 +1405,7 @@ Published outcomes generally report success rates between 70 and 95 percent for 
 
 **Published:** Jul 17, 2026
 
-**Source:** https://drnitinsunkuortho.com/blog/hip-resurfacing-vs-total-hip-replacement-india-comparison-guide/
+**Source:** https://drnitinsunkuortho.com/blog/hip-resurfacing-vs-total-hip-replacement/
 
 # Hip Resurfacing vs Total Hip Replacement in India: A Complete Comparison Guide (2026)
 

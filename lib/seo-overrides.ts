@@ -32,12 +32,12 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "A complete patient guide to meniscus flap tears (parrot-beak tears). Understand the causes, mechanical symptoms, repair options, and recovery timeline.",
     },
-    "hip-resurfacing-vs-total-hip-replacement-india-comparison-guide": {
+    "hip-resurfacing-vs-total-hip-replacement": {
         title: "Hip Resurfacing vs Total Hip Replacement in India: Comparison Guide",
         description:
             "A comprehensive patient guide comparing hip resurfacing vs total hip replacement in India. Compare costs, recovery, candidacy, gender guidelines, and implant sizes.",
     },
-    "slap-tear-shoulder-surgery-recovery-dos-and-donts-timeline-guide": {
+    "slap-tear-shoulder-surgery-recovery-dos-and-donts": {
         title: "SLAP Tear Shoulder Surgery Recovery: Do's and Don'ts Timeline",
         description:
             "A complete timeline guide for SLAP tear shoulder surgery recovery. Discover critical do's and don'ts, recovery stages, and physiotherapy milestones.",

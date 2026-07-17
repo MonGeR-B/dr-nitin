@@ -486,7 +486,7 @@ export const blogPosts = [
     `
   },
   {
-    slug: "hip-resurfacing-vs-total-hip-replacement-india-comparison-guide",
+    slug: "hip-resurfacing-vs-total-hip-replacement",
     title: "Hip Resurfacing vs Total Hip Replacement in India: A Complete Comparison Guide (2026)",
     excerpt: "If hip pain has started dictating your day, from how you tie your shoes to whether you can sit through a flight, you have probably landed on two names: hip resurfacing and total hip replacement. Both are surgical solutions for a damaged hip joint, both are performed widely across India, and both can genuinely give you your life back. But they are not the same operation, they do not suit the same patient, and choosing the wrong one can cost you comfort, money, and time you cannot get back.",
     date: "Jul 17, 2026",
@@ -650,7 +650,7 @@ export const blogPosts = [
     `
   },
   {
-    slug: "slap-tear-shoulder-surgery-recovery-dos-and-donts-timeline-guide",
+    slug: "slap-tear-shoulder-surgery-recovery-dos-and-donts",
     title: "SLAP Tear Shoulder Surgery Recovery: Do's and Don'ts (Complete Timeline Guide)",
     excerpt: "A SLAP tear (Superior Labrum, Anterior to Posterior) is one of the most common reasons an active adult or athlete ends up needing shoulder arthroscopy. If you have just had surgery, or you are scheduled for one, the outcome of your procedure will depend far less on the surgery itself and far more on what you do (and avoid doing) in the weeks and months that follow. This guide walks you through a realistic, week-by-week SLAP tear shoulder surgery recovery timeline, along with clear do's and don'ts that most patients are never told in detail during a short clinic visit.",
     date: "Jul 17, 2026",

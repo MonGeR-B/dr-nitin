@@ -66,8 +66,8 @@ Base URL pattern: https://www.drnitinsunkuortho.com/blog/{slug}
 Slugs (deduplicated):
 - stress-fracture-treatment-symptoms-causes-recovery
 - meniscus-flap-tear-repair-causes-symptoms-recovery
-- hip-resurfacing-vs-total-hip-replacement-india-comparison-guide
-- slap-tear-shoulder-surgery-recovery-dos-and-donts-timeline-guide
+- hip-resurfacing-vs-total-hip-replacement
+- slap-tear-shoulder-surgery-recovery-dos-and-donts
 - types-of-total-knee-replacement
 - arthroscopy-shoulder
 - phases-of-achilles-tendinopathy

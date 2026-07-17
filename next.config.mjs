@@ -27,6 +27,16 @@ const nextConfig = {
                 destination: '/best-orthopedic-doctor',
                 permanent: true,
             },
+            {
+                source: '/blog/slap-tear-shoulder-surgery-recovery-dos-and-donts-timeline-guide',
+                destination: '/blog/slap-tear-shoulder-surgery-recovery-dos-and-donts',
+                permanent: true,
+            },
+            {
+                source: '/blog/hip-resurfacing-vs-total-hip-replacement-india-comparison-guide',
+                destination: '/blog/hip-resurfacing-vs-total-hip-replacement',
+                permanent: true,
+            },
         ];
     },
 };
