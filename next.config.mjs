@@ -38,6 +38,16 @@ const nextConfig = {
                 destination: '/blog/why-are-sports-injuries-so-common-and-how-do-we-treat-them',
                 permanent: true,
             },
+            {
+                source: '/blog/slap-tear-shoulder-surgery-recovery-dos-and-donts-timeline-guide',
+                destination: '/blog/slap-tear-shoulder-surgery-recovery-dos-and-donts',
+                permanent: true,
+            },
+            {
+                source: '/blog/hip-resurfacing-vs-total-hip-replacement-india-comparison-guide',
+                destination: '/blog/hip-resurfacing-vs-total-hip-replacement',
+                permanent: true,
+            },
         ];
     },
 };
