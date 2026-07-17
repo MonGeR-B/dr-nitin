@@ -22,6 +22,26 @@ export interface SeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+    "stress-fracture-treatment-symptoms-causes-recovery": {
+        title: "Stress Fracture Treatment: Symptoms, Causes, and Recovery Guide",
+        description:
+            "A comprehensive runner and athlete guide to stress fractures. Learn symptoms, low-risk vs high-risk locations, diagnostic MRI, recovery timeline, and costs in India.",
+    },
+    "meniscus-flap-tear-repair-causes-symptoms-recovery": {
+        title: "Meniscus Flap Tear Repair: Causes, Symptoms, and Recovery",
+        description:
+            "A complete patient guide to meniscus flap tears (parrot-beak tears). Understand the causes, mechanical symptoms, repair options, and recovery timeline.",
+    },
+    "hip-resurfacing-vs-total-hip-replacement-india-comparison-guide": {
+        title: "Hip Resurfacing vs Total Hip Replacement in India: Comparison Guide",
+        description:
+            "A comprehensive patient guide comparing hip resurfacing vs total hip replacement in India. Compare costs, recovery, candidacy, gender guidelines, and implant sizes.",
+    },
+    "slap-tear-shoulder-surgery-recovery-dos-and-donts-timeline-guide": {
+        title: "SLAP Tear Shoulder Surgery Recovery: Do's and Don'ts Timeline",
+        description:
+            "A complete timeline guide for SLAP tear shoulder surgery recovery. Discover critical do's and don'ts, recovery stages, and physiotherapy milestones.",
+    },
     "types-of-total-knee-replacement": {
         title: "Types of Total Knee Replacement: A Complete Patient Guide",
         description:
