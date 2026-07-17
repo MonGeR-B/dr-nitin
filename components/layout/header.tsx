@@ -8,10 +8,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/data";
 
+// Awards & Publications intentionally live in the footer (Quick Links) rather
+// than the primary header nav, to keep the top navigation focused.
 const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
+    { name: "Treatments", href: "/treatments" },
     { name: "Patient Stories", href: "/testimonials" },
     { name: "Gallery", href: "/gallery" },
     { name: "Team", href: "/team" },
@@ -36,13 +39,25 @@ export function Header() {
                     aria-label="Global"
                 >
                     {/* Logo */}
-                    <div className="flex lg:flex-1">
-                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
-                            <img
-                                src="/dr-nitin-sunku-logo.svg"
-                                alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
-                                className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
-                            />
+                    <div className="flex shrink-0">
+                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2.5 group" aria-label="Dr. Nitin N Sunku — Home">
+                            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-white/40 overflow-hidden shrink-0 transition-transform duration-300 group-hover:scale-105">
+                                <img
+                                    src="https://ik.imagekit.io/vlries1el/dr%20nitin/dr-nitin-sunku-logo.svg"
+                                    alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
+                                    className="h-11 w-11 object-contain"
+                                    width={44}
+                                    height={44}
+                                />
+                            </span>
+                            <span className="hidden sm:flex flex-col leading-tight">
+                                <span className="font-heading text-sm xl:text-base font-bold text-white whitespace-nowrap">
+                                    Dr. Nitin N Sunku
+                                </span>
+                                <span className="hidden xl:block text-[11px] font-medium text-blue-100 tracking-wide whitespace-nowrap">
+                                    Orthopedic &amp; Sports Medicine
+                                </span>
+                            </span>
                         </Link>
                     </div>
 
@@ -52,6 +67,9 @@ export function Header() {
                             type="button"
                             className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-white hover:bg-blue-700 transition-colors"
                             onClick={() => setMobileMenuOpen(true)}
+                            aria-expanded={mobileMenuOpen}
+                            aria-controls="mobile-menu-panel"
+                            aria-label="Open main menu"
                         >
                             <span className="sr-only">Open main menu</span>
                             <Menu className="h-6 w-6" aria-hidden="true" />
@@ -59,16 +77,16 @@ export function Header() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex lg:gap-x-1">
+                    <div className="hidden lg:flex lg:items-center lg:gap-x-0.5 xl:gap-x-1">
                         {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
                                 className={cn(
-                                    "relative px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
+                                    "relative whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
                                     isActive(item.href)
                                         ? "text-white bg-blue-800"
-                                        : "text-blue-100 hover:text-white hover:bg-blue-700"
+                                        : "text-blue-50 hover:text-white hover:bg-blue-700"
                                 )}
                             >
                                 {item.name}
@@ -85,15 +103,15 @@ export function Header() {
                     </div>
 
                     {/* Desktop CTAs */}
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center gap-3">
+                    <div className="hidden lg:flex lg:items-center gap-2 xl:gap-3 shrink-0">
                         <a
                             href={`tel:${siteConfig.phone}`}
-                            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-blue-100 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
+                            className="hidden xl:flex items-center gap-2 px-3 py-2 text-sm font-semibold text-blue-50 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
                         >
                             <Phone className="h-4 w-4" />
                             <span>{siteConfig.phone}</span>
                         </a>
-                        <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
+                        <Button asChild className="whitespace-nowrap bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
                             <Link href="/contact">Book Appointment</Link>
                         </Button>
                     </div>
@@ -109,7 +127,7 @@ export function Header() {
                 />
 
                 {/* Menu Panel */}
-                <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm shadow-2xl">
+                <div id="mobile-menu-panel" className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm shadow-2xl">
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
                             <div className="bg-gradient-to-br from-blue-600 to-teal-500 p-2 rounded-lg">

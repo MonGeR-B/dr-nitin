@@ -2,8 +2,12 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
+import { PageInternalLinks } from "@/components/ui/page-internal-links";
 import { Button } from "@/components/ui/button";
 import { TestimonialsShowcase } from "@/components/sections/testimonials-showcase";
+import { JsonLd } from "@/components/seo/json-ld";
+import { testimonialsData } from "@/lib/data";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
@@ -11,11 +15,43 @@ export const metadata: Metadata = {
     },
     description:
         "Read real patient testimonials of Dr. Nitin N Sunku, trusted orthopedic & sports medicine specialist known for expert care and recovery outcomes.",
+    alternates: { canonical: `${siteOrigin}/testimonials` },
 };
 
 export default function TestimonialsPage() {
+    const ratings = testimonialsData.map((t) => t.rating);
+    const avgRating = (
+        ratings.reduce((a, b) => a + b, 0) / ratings.length
+    ).toFixed(1);
+
+    const reviewSchema = {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "@id": `${siteOrigin}/#physician`,
+        name: "Dr. Nitin N Sunku",
+        url: `${siteOrigin}/testimonials`,
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: avgRating,
+            reviewCount: testimonialsData.length,
+            bestRating: "5",
+            worstRating: "1",
+        },
+        review: testimonialsData.map((t) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: t.name },
+            reviewRating: {
+                "@type": "Rating",
+                ratingValue: String(t.rating),
+                bestRating: "5",
+            },
+            reviewBody: t.quote,
+        })),
+    };
+
     return (
         <main className="min-h-screen pb-20">
+            <JsonLd data={reviewSchema} />
             <PageHeaderBold
                 title="Patient Stories"
                 description="Hear from patients who have regained their mobility and active lifestyle with Dr. Nitin's care."
@@ -85,6 +121,17 @@ export default function TestimonialsPage() {
                     </div>
                 </div>
             </section>
+
+            <PageInternalLinks
+                heading="Explore more"
+                links={[
+                    { label: "Treatments & services offered", href: "/services" },
+                    { label: "Meet Dr. Nitin N Sunku", href: "/about" },
+                    { label: "Regenerative & non-surgical treatments", href: "/treatments" },
+                    { label: "Clinic locations", href: "/practice" },
+                    { label: "Book an appointment", href: "/contact" },
+                ]}
+            />
         </main>
     );
 }

@@ -34,11 +34,14 @@ import { FadeIn } from "@/components/animations/fade-in";
 import { HSR_CLINIC, CLINICS } from "@/lib/practice";
 import { siteOrigin } from "@/lib/site-url";
 import { LockBodyOverflow } from "./lock-body-overflow";
+import { LandingFaq } from "@/components/landing/landing-faq";
 
 // ---------- SEO ----------
 export const metadata: Metadata = {
-    title:
-        "Trusted Orthopedic Doctor in HSR Layout | Dr. Nitin N Sunku — Same-Day Appointment",
+    // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
+    // template — without it the live <title> renders the brand twice.
+    // Also trimmed: the previous 85-char title was truncated in SERPs.
+    title: { absolute: "Orthopedic Doctor in HSR Layout, Bengaluru | Dr. Nitin N Sunku" },
     description:
         "Dr. Nitin N Sunku — trusted Orthopedic & Sports Medicine Specialist in HSR Layout, Bengaluru. Expert care for knee pain, joint replacement, sports injury, arthroscopy & fracture care. Same-day appointments available.",
     alternates: { canonical: `${siteOrigin}/orthopedic-doctor-in-hsr-layout` },
@@ -212,7 +215,7 @@ export default function OrthopedicAttibeleLandingPage() {
                 <div className="container mx-auto px-4 flex items-center justify-between py-3">
                     <div className="flex items-center gap-2 min-w-0">
                         <img
-                            src="/dr-nitin-sunku-logo.svg"
+                            src="https://ik.imagekit.io/vlries1el/dr%20nitin/dr-nitin-sunku-logo.svg"
                             alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
                             className="h-10 sm:h-12 w-auto flex-shrink-0"
                         />
@@ -458,7 +461,8 @@ export default function OrthopedicAttibeleLandingPage() {
                                         title="Patient testimonial 1 — Dr. Nitin N Sunku"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                        loading="lazy"
+                                    allowFullScreen
                                         className="w-full h-full"
                                     ></iframe>
                                 </div>
@@ -476,7 +480,8 @@ export default function OrthopedicAttibeleLandingPage() {
                                         title="Patient testimonial 2 — Dr. Nitin N Sunku"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                        loading="lazy"
+                                    allowFullScreen
                                         className="w-full h-full"
                                     ></iframe>
                                 </div>
@@ -494,7 +499,8 @@ export default function OrthopedicAttibeleLandingPage() {
                                         title="Patient testimonial 3 — Dr. Nitin N Sunku"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                        loading="lazy"
+                                    allowFullScreen
                                         className="w-full h-full"
                                     ></iframe>
                                 </div>
@@ -669,7 +675,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                     What sets Dr. Nitin apart is his commitment to conservative-first treatment approach, exploring all non-surgical options before recommending surgery. His expertise in advanced arthroscopic techniques ensures that when surgery is necessary, patients benefit from smaller incisions, reduced pain, and faster rehabilitation.
                                 </p>
                                 <p className="text-base text-gray-600 mb-6 leading-relaxed">
-                                    As an academic contributor to Springer's internationally acclaimed textbook "Atlas of Arthroscopy," Dr. Sunku stays at the forefront of orthopedic innovations. His dual role as a clinician and educator ensures that every patient receives care based on the latest evidence-based practices and global best standards.
+                                    As an academic contributor to Springer&apos;s internationally acclaimed textbook &quot;Atlas of Arthroscopy,&quot; Dr. Sunku stays at the forefront of orthopedic innovations. His dual role as a clinician and educator ensures that every patient receives care based on the latest evidence-based practices and global best standards.
                                 </p>
 
                                 {/* Credentials */}
@@ -1011,6 +1017,38 @@ export default function OrthopedicAttibeleLandingPage() {
                     </div>
                 </div>
             </section>
+
+            <LandingFaq
+                pageName="Orthopedic Doctor in HSR Layout, Bengaluru"
+                pagePath="/orthopedic-doctor-in-hsr-layout"
+                subheading="Practical answers about consulting Dr. Nitin at Health Nest Hospital, HSR Layout."
+                items={[
+                    {
+                        q: "Where does Dr. Nitin consult in HSR Layout?",
+                        a: "At Health Nest Hospital, 1162, 24th Main Road, Garden Layout, Sector 2, HSR Layout, Bengaluru 560102. Call +91-9449031003 to confirm timings, or book through the form on this page for a same-day slot where available.",
+                    },
+                    {
+                        q: "What conditions are treated at the HSR Layout clinic?",
+                        a: "Knee, shoulder, hip and ankle pain, sports injuries, ACL and meniscus tears, arthritis, fractures, back pain, and regenerative treatments such as PRP, GFC and hyaluronic acid injections. Surgical cases (arthroscopy, joint replacement) are evaluated here and scheduled at the partner hospital.",
+                    },
+                    {
+                        q: "How much does a consultation cost?",
+                        a: "A consultation typically costs ₹500–₹1,000 and includes a clinical examination and a written treatment plan. Imaging is advised only when it will genuinely change the treatment decision.",
+                    },
+                    {
+                        q: "Can I get a same-day appointment in HSR Layout?",
+                        a: "Usually, yes. Same-day and next-day slots are generally available on consulting days. WhatsApp or call ahead to confirm, or submit the booking form and the team will call back within hours.",
+                    },
+                    {
+                        q: "Do you accept health insurance?",
+                        a: "Yes — insurance is accepted and the team assists with pre-authorisation paperwork for procedures such as arthroscopy and joint replacement. Outpatient consultations are typically paid out of pocket unless your policy covers OPD.",
+                    },
+                    {
+                        q: "Is surgery always recommended for joint problems?",
+                        a: "No. The practice follows a conservative-first philosophy: physiotherapy, medication, lifestyle changes and targeted injections are exhausted before surgery is discussed. Surgery is recommended only when the evidence clearly supports it for your specific condition.",
+                    },
+                ]}
+            />
 
             {/* ============= FINAL CTA STRIP ============= */}
             <section className="bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-800 py-8 md:py-10 relative overflow-hidden">
