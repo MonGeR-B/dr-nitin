@@ -42,6 +42,7 @@ import {
     HeroImage,
 } from "@/components/landing/landing-chrome";
 import { LandingFaq } from "@/components/landing/landing-faq";
+import { LandingArticle } from "@/components/landing/landing-article";
 
 export const metadata: Metadata = {
     // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
@@ -639,6 +640,8 @@ export default function FractureTreatmentAttibelePage() {
                     </div>
                 </div>
             </section>
+
+            <LandingArticle slug="fracture-treatment-attibele" />
 
             <LandingFaq
                 pageName="Fracture Treatment in Attibele, Bengaluru"

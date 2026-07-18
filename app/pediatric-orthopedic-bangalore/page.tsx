@@ -40,6 +40,7 @@ import {
     HeroImage,
 } from "@/components/landing/landing-chrome";
 import { LandingFaq } from "@/components/landing/landing-faq";
+import { LandingArticle } from "@/components/landing/landing-article";
 
 export const metadata: Metadata = {
     // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
@@ -483,6 +484,8 @@ export default function PediatricOrthopedicBangalorePage() {
                 heading="Consult at Attibele or HSR Layout"
                 subheading="Children's fracture care, casting and 24/7 casualty are at Raghava Multispeciality Hospital, Attibele."
             />
+
+            <LandingArticle slug="pediatric-orthopedic-bangalore" />
 
             <LandingFaq
                 pageName="Pediatric Orthopedic Care in Bangalore"

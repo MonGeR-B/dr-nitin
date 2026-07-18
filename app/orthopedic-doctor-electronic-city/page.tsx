@@ -39,6 +39,7 @@ import {
     HeroImage,
 } from "@/components/landing/landing-chrome";
 import { LandingFaq } from "@/components/landing/landing-faq";
+import { LandingArticle } from "@/components/landing/landing-article";
 
 export const metadata: Metadata = {
     // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
@@ -453,6 +454,8 @@ export default function OrthopedicDoctorElectronicCityPage() {
                 heading="Two Clinics — Pick the Easier Drive"
                 subheading="Attibele (20 min south via Hosur Road) is primary; HSR Layout works if you're headed toward the city."
             />
+
+            <LandingArticle slug="orthopedic-doctor-electronic-city" />
 
             <LandingFaq
                 pageName="Orthopedic Doctor near Electronic City, Bengaluru"

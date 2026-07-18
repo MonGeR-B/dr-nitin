@@ -40,6 +40,7 @@ import {
     HeroImage,
 } from "@/components/landing/landing-chrome";
 import { LandingFaq } from "@/components/landing/landing-faq";
+import { LandingArticle } from "@/components/landing/landing-article";
 
 export const metadata: Metadata = {
     // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
@@ -472,6 +473,8 @@ export default function ShoulderPainBangalorePage() {
                 heading="Consult at Attibele or HSR Layout"
                 subheading="Shoulder assessment, guided injections and arthroscopic surgery — at whichever clinic suits you."
             />
+
+            <LandingArticle slug="shoulder-pain-bangalore" />
 
             <LandingFaq
                 pageName="Shoulder Pain Specialist in Bangalore"

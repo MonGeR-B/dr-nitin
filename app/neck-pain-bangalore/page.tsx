@@ -40,6 +40,7 @@ import {
     HeroImage,
 } from "@/components/landing/landing-chrome";
 import { LandingFaq } from "@/components/landing/landing-faq";
+import { LandingArticle } from "@/components/landing/landing-article";
 
 export const metadata: Metadata = {
     // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
@@ -441,6 +442,8 @@ export default function NeckPainBangalorePage() {
                 heading="Consult at Attibele or HSR Layout"
                 subheading="Neck assessment and treatment at whichever clinic suits your commute."
             />
+
+            <LandingArticle slug="neck-pain-bangalore" />
 
             <LandingFaq
                 pageName="Neck Pain Specialist in Bangalore"
