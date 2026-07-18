@@ -7,7 +7,7 @@ import { siteOrigin } from '@/lib/site-url'
 // used `new Date()`, so every build claimed the entire site had just changed —
 // Google learns to distrust and ignore lastmod when it's always "now".
 // Bump this date only when site-wide content genuinely changes.
-const SITE_CONTENT_UPDATED = new Date('2026-07-04')
+const SITE_CONTENT_UPDATED = new Date('2026-07-18')
 
 /** Parse blog-post display dates like "Mar 2, 2026"; fall back to the site date. */
 function postDate(dateStr?: string): Date {
@@ -49,6 +49,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: '/back-pain-bangalore', priority: 0.8 },
         // Local-intent ads landing page for the Attibele primary clinic. Mirror of /orthopedic-doctor-in-hsr-layout for South Bengaluru catchment.
         { path: '/orthopedic-doctor-attibele', priority: 0.8 },
+        // Fracture / trauma / accident-care money page for the Attibele hospital.
+        // Targets urgent local intent ("fracture treatment near me") across the
+        // Attibele–Bommasandra–Jigani industrial belt.
+        { path: '/fracture-treatment-attibele', priority: 0.8 },
+        // Geo catchment page: Electronic City (IT-corridor framing, ~20 min from
+        // the Attibele clinic). Distinct content, not a mirror of the Attibele page.
+        { path: '/orthopedic-doctor-electronic-city', priority: 0.8 },
+        // Geo catchment page: Chandapura with Anekal folded in-page (weakest
+        // competing SERP of the corridor — directories only as of Jul 2026).
+        { path: '/orthopedic-doctor-chandapura', priority: 0.8 },
+        // Commercial cost money page. Replaces the former blog post
+        // /blog/knee-replacement-cost-in-bangalore (301 in next.config.mjs).
+        { path: '/knee-replacement-cost-bangalore', priority: 0.8 },
+        // Tier 2 condition landing pages (Jul 2026) — mirror the
+        // knee-pain/back-pain pattern: FAQ schema, both clinics, per-page
+        // lead source. Funneled from matching blog posts via internal-links.
+        { path: '/shoulder-pain-bangalore', priority: 0.8 },
+        { path: '/neck-pain-bangalore', priority: 0.8 },
+        { path: '/hip-pain-bangalore', priority: 0.8 },
+        { path: '/arthritis-treatment-bangalore', priority: 0.8 },
+        { path: '/acl-reconstruction-bangalore', priority: 0.8 },
+        // Tier 3 (Jul 2026): cross-border catchment page (Hosur, TN side),
+        // pediatric condition page, and the insurance/cashless conversion
+        // support page (generic — no insurer names until the hospital's
+        // empanelment list is confirmed).
+        { path: '/orthopedic-doctor-near-hosur', priority: 0.8 },
+        { path: '/pediatric-orthopedic-bangalore', priority: 0.8 },
+        { path: '/insurance-cashless-orthopedic-treatment', priority: 0.7 },
         { path: '/privacy-policy', priority: 0.3 },
         { path: '/terms', priority: 0.3 },
     ]

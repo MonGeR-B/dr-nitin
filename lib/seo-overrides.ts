@@ -46,11 +46,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Looking for the best orthopedic surgeon in Attibele? What to look for, conditions treated, first-visit cost, and how to book with Dr. Nitin N Sunku at Raghava Hospital.",
     },
-    "knee-replacement-cost-in-bangalore": {
-        title: "Knee Replacement Cost in Bangalore 2026 | Honest Price Guide",
-        description:
-            "Knee replacement cost in Bangalore in 2026: realistic price ranges, what drives the cost, what's included, insurance and planning tips. Dr. Nitin N Sunku, Attibele.",
-    },
     "surgery-vs-injections-for-knee-pain": {
         title: "Surgery vs Injections for Knee Pain: Which Is Right? (2026)",
         description:

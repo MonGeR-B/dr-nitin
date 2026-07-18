@@ -31,7 +31,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["knee-replacement", "total-knee", "titanium", "johnson", "ceramic"],
     links: [
-      { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/blog/knee-replacement-cost-in-bangalore" },
+      { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
       { label: "Types of total knee replacement explained", href: "/blog/types-of-total-knee-replacement" },
       { label: "Knee Replacement service", href: "/services/knee-replacement" },
       { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
@@ -40,6 +40,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["acl", "anterior-cruciate", "cruciate", "pcl"],
     links: [
+      { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
       { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
       { label: "Can you walk with a torn ACL?", href: "/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru" },
       { label: "ACL Care service", href: "/services/acl-care" },
@@ -58,6 +59,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["shoulder", "rotator-cuff", "arthroscopy-shoulder"],
     links: [
+      { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
       { label: "Rotator cuff injury: how to treat shoulder pain", href: "/blog/rotator-cuff-injury-heres-how-to-treat-shoulder-pain-effectively" },
       { label: "When is shoulder replacement needed?", href: "/blog/when-is-shoulder-replacement-surgery-needed" },
       { label: "Shoulder Care service", href: "/services/shoulder-care" },
@@ -76,6 +78,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["osteoarthritis", "obesity", "joint-pain", "joint-health", "arthritis"],
     links: [
+      { label: "Arthritis treatment in Bangalore", href: "/arthritis-treatment-bangalore" },
       { label: "Osteoarthritis knee treatment", href: "/treatments/osteoarthritis-knee-treatment" },
       { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
       { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
@@ -92,8 +95,9 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["spine", "posture", "herniated-disc", "back"],
+    keywords: ["spine", "posture", "herniated-disc", "back", "neck", "cervical"],
     links: [
+      { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
       { label: "Spine Care service", href: "/services/spine-care" },
       { label: "How posture affects spine and joint health", href: "/blog/how-posture-affects-spine-and-joint-health" },
       { label: "Herniated disc pain: expert relief in Bangalore", href: "/blog/herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n" },
@@ -103,6 +107,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["hip"],
     links: [
+      { label: "Hip pain specialist in Bangalore", href: "/hip-pain-bangalore" },
       { label: "Hip Replacement service", href: "/services/hip-replacement" },
       { label: "Natural alternatives to hip replacement", href: "/blog/natural-alternatives-to-hip-replacement" },
       { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
@@ -125,20 +130,14 @@ const GENERIC_LINKS: InternalLink[] = [
  */
 const CURATED_LINKS: Record<string, InternalLink[]> = {
   "best-orthopedic-surgeon-in-attibele": [
-    { label: "Knee replacement cost in Bangalore", href: "/blog/knee-replacement-cost-in-bangalore" },
+    { label: "Knee replacement cost in Bangalore", href: "/knee-replacement-cost-bangalore" },
     { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
     { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
     { label: "Explore all treatments", href: "/treatments" },
   ],
-  "knee-replacement-cost-in-bangalore": [
-    { label: "Types of total knee replacement", href: "/blog/types-of-total-knee-replacement" },
-    { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
-    { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
-    { label: "Knee Replacement service", href: "/services/knee-replacement" },
-  ],
   "surgery-vs-injections-for-knee-pain": [
     { label: "PRP & GFC injection cost and eligibility", href: "/blog/prp-gfc-injection-cost-eligibility-bangalore" },
-    { label: "Knee replacement cost in Bangalore", href: "/blog/knee-replacement-cost-in-bangalore" },
+    { label: "Knee replacement cost in Bangalore", href: "/knee-replacement-cost-bangalore" },
     { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
     { label: "Osteoarthritis knee treatment", href: "/treatments/osteoarthritis-knee-treatment" },
   ],
@@ -170,6 +169,7 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
  */
 const SERVICE_LINKS: Record<string, InternalLink[]> = {
   "acl-care": [
+    { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
     { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
     { label: "Can you walk with a torn ACL?", href: "/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru" },
     { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
@@ -188,30 +188,36 @@ const SERVICE_LINKS: Record<string, InternalLink[]> = {
     { label: "Shoulder Care service", href: "/services/shoulder-care" },
   ],
   "knee-replacement": [
-    { label: "Knee replacement cost in Bangalore (2026)", href: "/blog/knee-replacement-cost-in-bangalore" },
+    { label: "Knee replacement cost in Bangalore (2026)", href: "/knee-replacement-cost-bangalore" },
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
     { label: "Types of total knee replacement", href: "/blog/types-of-total-knee-replacement" },
     { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
     { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
   ],
   "hip-replacement": [
+    { label: "Hip pain specialist in Bangalore", href: "/hip-pain-bangalore" },
     { label: "Natural alternatives to hip replacement", href: "/blog/natural-alternatives-to-hip-replacement" },
     { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
     { label: "Osteoarthritis knee treatment", href: "/treatments/osteoarthritis-knee-treatment" },
     { label: "Knee Replacement service", href: "/services/knee-replacement" },
   ],
   "shoulder-care": [
+    { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
     { label: "Rotator cuff injury: how to treat shoulder pain", href: "/blog/rotator-cuff-injury-heres-how-to-treat-shoulder-pain-effectively" },
     { label: "When is shoulder replacement needed?", href: "/blog/when-is-shoulder-replacement-surgery-needed" },
     { label: "Shoulder arthroscopy explained", href: "/blog/arthroscopy-shoulder" },
     { label: "Sports Medicine service", href: "/services/sports-medicine" },
   ],
   "bone-fracture": [
+    { label: "Fracture & accident care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "Pediatric orthopedic care in Bangalore", href: "/pediatric-orthopedic-bangalore" },
     { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
     { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
     { label: "Best orthopedic surgeon in Attibele", href: "/blog/best-orthopedic-surgeon-in-attibele" },
     { label: "Sports Medicine service", href: "/services/sports-medicine" },
   ],
   "spine-care": [
+    { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
     { label: "Herniated disc pain: expert relief in Bangalore", href: "/blog/herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n" },
     { label: "How posture affects spine and joint health", href: "/blog/how-posture-affects-spine-and-joint-health" },
     { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
