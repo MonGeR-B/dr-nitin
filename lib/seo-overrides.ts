@@ -41,6 +41,7 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         title: "SLAP Tear Shoulder Surgery Recovery: Do's and Don'ts Timeline",
         description:
             "A complete timeline guide for SLAP tear shoulder surgery recovery. Discover critical do's and don'ts, recovery stages, and physiotherapy milestones.",
+    },
     "best-orthopedic-surgeon-in-attibele": {
         title: "Best Orthopedic Surgeon in Attibele | Dr. Nitin N Sunku",
         description:
@@ -324,10 +325,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         title: "Anterior and Posterior Cruciate Ligament: Anatomy, Injuries, and the Right Treatment Path",
         description: "Understand the anterior and posterior cruciate ligament (ACL and PCL), how each gets injured, how to tell them apart, and which treatments work. Expert guidance from Dr. Nitin N Sunku, orthopedic and sports medicine specialist in Bengaluru.",
     },
-    "advantages-and-disadvantages-of-robotic-knee-replacement": {
-        title: "Advantages and Disadvantages of Robotic Knee Replacement: A Complete Patient Guide",
-        description: "Explore the real advantages and disadvantages of robotic knee replacement surgery. Dr. Nitin N Sunku explains precision, cost, recovery, and whether robot-assisted surgery is right for you in Bengaluru.",
-    },
     "asymptomatic-meniscus-tear": {
         title: "Asymptomatic Meniscus Tear: Symptoms, Causes, and Recovery Explained",
         description: "Learn everything about an asymptomatic meniscus tear — what it is, why it happens, when symptoms appear, and how to recover safely. Expert insights from Dr. Nitin N Sunku, orthopedic surgeon in Bengaluru.",
@@ -335,6 +332,7 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
     "bilateral-total-knee-replacement": {
         title: "Bilateral Total Knee Replacement: What Patients in Bengaluru Need to Know Before Deciding",
         description: "Considering bilateral total knee replacement in Bengaluru? Dr. Nitin N Sunku explains the procedure, simultaneous vs. staged options, recovery timeline, risks, and who is the right candidate.",
+    },
 
     // ── Jun 2026 cost pillars ──
     "spine-surgery-cost-in-india": {
