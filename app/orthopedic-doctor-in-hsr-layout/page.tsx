@@ -85,7 +85,7 @@ export const metadata: Metadata = {
         url: `${siteOrigin}/orthopedic-doctor-in-hsr-layout`,
         type: "website",
     },
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },  // ads-only landing page: kept out of organic index; 'follow' preserves link equity to linked pages
 };
 
 // ---------- DATA ----------

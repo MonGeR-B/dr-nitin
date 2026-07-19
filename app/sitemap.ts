@@ -40,7 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Local-intent ads landing page (HSR Layout). Targets long-tail local
         // queries ("orthopedic doctor HSR Layout") that don't compete with
         // /book-appointment or the homepage.
-        { path: '/orthopedic-doctor-in-hsr-layout', priority: 0.8 },
         // Condition-specific ads landing page (knee pain). High commercial intent.
         { path: '/knee-pain-bangalore', priority: 0.8 },
         // Condition-specific ads landing page (sports injury). Leans on the Bengaluru FC team-doctor credential.
