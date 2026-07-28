@@ -2,12 +2,14 @@ import Script from "next/script";
 import { GOOGLE_ADS_CONVERSION_ID } from "@/lib/gtag";
 
 /**
- * Layout for the Sports Orthopedic Doctor (HSR Layout) ads landing page.
+ * Layout for the "Sports Orthopedic Doctor in HSR Layout" ad landing page.
  *
- * Mounts Google Ads gtag (env: NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID) and Meta
- * Pixel (env: NEXT_PUBLIC_META_PIXEL_ID) so Google & Meta ad conversions can
- * fire from this page. GA4 / GTM and the floating WhatsApp button are already
- * mounted in app/layout.tsx — do NOT duplicate them here.
+ * - Mounts Google Ads gtag (env: NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID) so
+ *   Google Ads conversion actions can fire.
+ * - Mounts Meta Pixel (env: NEXT_PUBLIC_META_PIXEL_ID) for FB / Instagram ads.
+ *
+ * GA4 / GTM and the floating WhatsApp button are already loaded in
+ * app/layout.tsx — do NOT duplicate them here.
  */
 export default function SportsOrthopedicDoctorHsrLayout({
     children,

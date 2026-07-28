@@ -2,12 +2,13 @@ import Script from "next/script";
 import { GOOGLE_ADS_CONVERSION_ID } from "@/lib/gtag";
 
 /**
- * Layout for the Total Knee Replacement Surgery ads landing page.
+ * Layout for the "Total Knee Replacement Surgery" ad landing page.
  *
- * Mounts Google Ads gtag (env: NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID) and Meta
- * Pixel (env: NEXT_PUBLIC_META_PIXEL_ID) for ad conversion tracking. GA4 / GTM
- * and the floating WhatsApp button are already mounted in app/layout.tsx — do
- * NOT duplicate them here.
+ * - Mounts Google Ads gtag (env: NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID).
+ * - Mounts Meta Pixel (env: NEXT_PUBLIC_META_PIXEL_ID).
+ *
+ * GA4 / GTM and the floating WhatsApp button are already loaded in
+ * app/layout.tsx — do NOT duplicate them here.
  */
 export default function TotalKneeReplacementSurgeryLayout({
     children,

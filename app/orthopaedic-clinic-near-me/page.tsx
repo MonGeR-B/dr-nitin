@@ -3,17 +3,18 @@ import {
     Phone,
     MapPin,
     Clock,
+    Award,
+    Heart,
+    CheckCircle,
+    ShieldCheck,
+    Stethoscope,
     Activity,
     Bone,
     Zap,
-    ShieldCheck,
+    UserCheck,
     Brain,
     Syringe,
-    Award,
-    Heart,
-    Users,
-    Stethoscope,
-    CheckCircle,
+    Sparkles,
     Star,
     MessageCircle,
     Calendar,
@@ -42,11 +43,13 @@ import {
 import { LandingFaq } from "@/components/landing/landing-faq";
 
 export const metadata: Metadata = {
+    // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku" template.
     title: {
-        absolute: "Orthopaedic Clinic Near Me in Bengaluru | Dr. Nitin N Sunku",
+        absolute:
+            "Orthopaedic Clinic Near Me in Bangalore | Dr. Nitin N Sunku",
     },
     description:
-        "Looking for an orthopaedic clinic near you? Dr. Nitin N Sunku runs orthopedic clinics in Attibele and HSR Layout, Bengaluru — expert care for bone, joint, knee, shoulder & sports injuries. Same-day appointments. Call or book online.",
+        "Looking for an orthopaedic clinic near me? Dr. Nitin N Sunku runs orthopedic clinics in Attibele and HSR Layout, Bengaluru — expert care for bone, joint, knee, sports & spine problems. Same-day appointments.",
     alternates: {
         canonical: `${siteOrigin}/orthopaedic-clinic-near-me`,
     },
@@ -60,18 +63,18 @@ export const metadata: Metadata = {
         "nearest orthopedic clinic",
         "orthopedic clinic in HSR",
         "near by orthopedic clinic",
+        "orthopedic clinic Bangalore",
         "Dr. Nitin N Sunku",
     ],
     openGraph: {
-        title: "Orthopaedic Clinic Near Me — Dr. Nitin N Sunku, Bengaluru",
+        title:
+            "Orthopaedic Clinic Near Me — Dr. Nitin N Sunku, Bengaluru",
         description:
-            "Two orthopedic clinics in Bengaluru — Attibele & HSR Layout. Expert bone, joint & sports care with same-day appointments.",
+            "Two orthopedic clinics in Attibele & HSR Layout. Expert care for bone, joint, knee, sports & spine problems — same-day appointments.",
         url: `${siteOrigin}/orthopaedic-clinic-near-me`,
         type: "website",
     },
-    // Ads-only landing page: kept out of the organic index. Near-me ranking is
-    // driven by Google Business Profile, not this page's copy.
-    robots: { index: false, follow: true },
+    robots: { index: false, follow: true }, // ads-only landing page: kept out of organic index; 'follow' preserves link equity.
 };
 
 const CLINIC = PRIMARY_CLINIC;
@@ -82,85 +85,86 @@ const WHATSAPP_MESSAGE =
 
 const services = [
     {
-        title: "Arthroscopy",
-        description: "Keyhole surgery for knee, shoulder & other joints.",
-        Icon: Activity,
-        bg: "bg-blue-50",
-        color: "text-blue-700",
-    },
-    {
-        title: "Joint Replacement",
-        description: "Knee, hip & shoulder replacement for better mobility.",
+        title: "Knee & Joint Pain",
+        description: "Arthritis, ligament and cartilage problems, joint replacement.",
         Icon: Bone,
+        color: "from-orange-500 to-orange-600",
         bg: "bg-orange-50",
-        color: "text-orange-700",
     },
     {
-        title: "Sports Injury",
-        description: "ACL, ligament & cartilage care for active people.",
-        Icon: Zap,
+        title: "Sports Injuries",
+        description: "ACL, meniscus, shoulder and ankle injuries — sports medicine.",
+        Icon: Sparkles,
+        color: "from-emerald-500 to-emerald-600",
         bg: "bg-emerald-50",
-        color: "text-emerald-700",
+    },
+    {
+        title: "Arthroscopy",
+        description: "Minimally invasive keyhole surgery for joints.",
+        Icon: Activity,
+        color: "from-blue-500 to-blue-600",
+        bg: "bg-blue-50",
     },
     {
         title: "Fracture & Trauma",
-        description: "Prompt care for fractures and injuries.",
+        description: "Advanced care for fractures and accident injuries.",
         Icon: ShieldCheck,
+        color: "from-red-500 to-red-600",
         bg: "bg-red-50",
-        color: "text-red-700",
     },
     {
-        title: "Back & Neck Pain",
-        description: "Diagnosis & treatment for spine-related pain.",
+        title: "Spine & Back Pain",
+        description: "Diagnosis and treatment for neck, back and spine conditions.",
         Icon: Brain,
+        color: "from-purple-500 to-purple-600",
         bg: "bg-purple-50",
-        color: "text-purple-700",
     },
     {
-        title: "Arthritis & PRP",
-        description: "Non-surgical relief with injections & regenerative care.",
+        title: "Regenerative Care",
+        description: "PRP and advanced injections to heal naturally.",
         Icon: Syringe,
+        color: "from-teal-500 to-teal-600",
         bg: "bg-teal-50",
-        color: "text-teal-700",
+    },
+    {
+        title: "Rehabilitation",
+        description: "Personalised physiotherapy and recovery planning.",
+        Icon: Heart,
+        color: "from-pink-500 to-pink-600",
+        bg: "bg-pink-50",
     },
 ];
 
 const whyChoose = [
     {
-        icon: MapPin,
-        title: "Two Clinics Close to You",
-        description:
-            "Orthopedic clinics in Attibele and HSR Layout — easy to reach from across south and southeast Bengaluru.",
+        title: "Expertise You Can Trust",
+        description: "Fellowship-trained orthopedic specialist with 10+ years of experience.",
+        Icon: ShieldCheck,
     },
     {
-        icon: Clock,
-        title: "Same-Day Appointments",
-        description:
-            "Same-day and next-day slots are usually available on consulting days — call or WhatsApp ahead.",
-    },
-    {
-        icon: Award,
-        title: "Experienced Specialist",
-        description:
-            "10+ years, fellowship-trained, and official team doctor for Bengaluru FC.",
-    },
-    {
-        icon: Stethoscope,
         title: "Conservative-First Care",
-        description:
-            "Non-surgical options are explored before surgery is ever recommended.",
+        description: "We exhaust non-surgical options before ever recommending surgery.",
+        Icon: Stethoscope,
     },
     {
-        icon: Heart,
-        title: "Patient-Centered",
-        description:
-            "Clear explanations, honest advice, and a plan you actually understand.",
+        title: "Advanced Technology",
+        description: "Modern diagnostics and minimally invasive techniques.",
+        Icon: Zap,
     },
     {
-        icon: Users,
-        title: "5000+ Happy Patients",
-        description:
-            "A 4.9-rated, trusted orthopedic practice across Bengaluru.",
+        title: "Two Clinics Near You",
+        description: "Attibele and HSR Layout — easy access across South Bengaluru.",
+        Icon: MapPin,
+    },
+    {
+        title: "Same-Day Appointments",
+        description: "Same-day and next-day slots usually available on consulting days.",
+        Icon: Clock,
+    },
+    {
+        title: "Trusted by Patients",
+        description: "Rated 4.9★ by hundreds of happy patients.",
+        Icon: UserCheck,
     },
 ];
 
@@ -189,7 +193,7 @@ export default function OrthopaedicClinicNearMePage() {
                                 <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-4 break-words">
                                     <span className="block">Orthopaedic Clinic</span>
                                     <span className="block bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1">
-                                        Near You in Bengaluru
+                                        Near You
                                     </span>
                                 </h1>
 
@@ -197,7 +201,7 @@ export default function OrthopaedicClinicNearMePage() {
                                     Dr. Nitin N Sunku — Orthopedic &amp; Sports Medicine Specialist
                                 </p>
                                 <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-xl leading-relaxed">
-                                    Searching for an orthopaedic clinic near me? Dr. Nitin N Sunku consults at two convenient orthopedic clinics in Bengaluru — Attibele and HSR Layout — for bone, joint, knee, shoulder and sports injury care. Whether you need the nearest orthopedic clinic in the southeast belt or an orthopedic clinic in HSR, expert, conservative-first treatment is close by.
+                                    Searching for an orthopaedic clinic near me? Dr. Nitin N Sunku runs two well-equipped orthopedic clinics in Bengaluru — in Attibele and in HSR Layout — for expert care of bone, joint, knee, sports and spine problems. Fellowship-trained, conservative-first, with same-day appointments and easy access from across South Bengaluru.
                                 </p>
 
                                 <div className="flex flex-wrap gap-2 mb-7">
@@ -268,23 +272,24 @@ export default function OrthopaedicClinicNearMePage() {
                                 — What We Treat —
                             </span>
                             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
-                                A Full Orthopedic Clinic{" "}
+                                A Full-Service{" "}
                                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                                    Under One Roof
+                                    Orthopedic Clinic
                                 </span>
                             </h2>
                             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                                From everyday aches to complex surgery — comprehensive orthopedic care at both clinics.
+                                Everything for bones, joints and muscles — under one roof, at both clinics.
                             </p>
                         </div>
                     </FadeIn>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-5 max-w-5xl mx-auto">
-                        {services.map(({ title, description, Icon, bg, color }, idx) => (
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 md:gap-5">
+                        {services.map(({ title, description, Icon, color, bg }, idx) => (
                             <FadeIn key={title} delay={idx * 0.05}>
-                                <div className="group bg-white rounded-2xl p-4 md:p-6 border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full">
+                                <div className="group relative bg-white rounded-2xl p-4 md:p-6 border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full overflow-hidden">
+                                    <div aria-hidden className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-100 transition-opacity`}></div>
                                     <div className={`w-12 h-12 md:w-14 md:h-14 mx-auto mb-3 rounded-2xl ${bg} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                                        <Icon className={`w-6 h-6 md:w-7 md:h-7 ${color}`} strokeWidth={2.2} />
+                                        <Icon className={`w-6 h-6 md:w-7 md:h-7 bg-gradient-to-br ${color} bg-clip-text`} style={{ color: "currentColor" }} strokeWidth={2.2} />
                                     </div>
                                     <h3 className="font-bold text-gray-900 text-sm md:text-base mb-1.5 text-center leading-tight">
                                         {title}
@@ -300,35 +305,42 @@ export default function OrthopaedicClinicNearMePage() {
             </section>
 
             {/* ============= WHY CHOOSE ============= */}
-            <section id="about" className="bg-gradient-to-br from-gray-50 via-blue-50/40 to-white py-14 md:py-20 overflow-hidden">
+            <section id="about" className="bg-white py-14 md:py-20 overflow-hidden">
                 <div className="container mx-auto px-4 max-w-7xl">
                     <FadeIn>
                         <div className="text-center mb-12">
                             <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
-                                — Why Patients Choose Us —
+                                — Why Choose Our Clinic —
                             </span>
                             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
-                                An Orthopedic Clinic That{" "}
+                                Your Health.{" "}
                                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                                    Actually Listens
+                                    Our Priority.
                                 </span>
                             </h2>
+                            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                                Six reasons patients across South Bengaluru choose Dr. Nitin&apos;s orthopedic clinics.
+                            </p>
                         </div>
                     </FadeIn>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-                        {whyChoose.map((point, idx) => (
-                            <FadeIn key={point.title} delay={idx * 0.06}>
-                                <div className="group bg-white rounded-2xl p-5 md:p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
-                                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-4 group-hover:from-blue-600 group-hover:to-blue-800 transition-colors">
-                                        <point.icon className="w-6 h-6 text-blue-700 group-hover:text-white transition-colors" />
+                        {whyChoose.map(({ title, description, Icon }, idx) => (
+                            <FadeIn key={title} delay={idx * 0.06}>
+                                <div className="group bg-white rounded-2xl p-4 sm:p-5 md:p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center flex-shrink-0 group-hover:from-blue-600 group-hover:to-blue-800 transition-colors">
+                                            <Icon className="w-5 h-5 md:w-6 md:h-6 text-blue-700 group-hover:text-white transition-colors" />
+                                        </div>
+                                        <div className="min-w-0 flex-1">
+                                            <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-1 leading-tight">
+                                                {title}
+                                            </h3>
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                                {description}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <h3 className="font-bold text-gray-900 text-base md:text-lg mb-2 leading-tight">
-                                        {point.title}
-                                    </h3>
-                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                        {point.description}
-                                    </p>
                                 </div>
                             </FadeIn>
                         ))}
@@ -353,7 +365,7 @@ export default function OrthopaedicClinicNearMePage() {
                                     Same-Day Appointments
                                 </span>
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight break-words">
-                                    Book at the Clinic Near You
+                                    Book at the Clinic Nearest You
                                 </h2>
                                 <p className="text-base md:text-lg text-blue-100 max-w-md mx-auto">
                                     Fill the form — our team will call you back within hours to confirm your slot at Attibele or HSR Layout.
@@ -386,46 +398,46 @@ export default function OrthopaedicClinicNearMePage() {
             <LocationsWithMaps
                 clinics={CLINICS}
                 primaryId={CLINIC.id}
-                heading="Find Your Nearest Clinic"
-                subheading="Two orthopedic clinics in Bengaluru — Attibele and HSR Layout. Pick whichever is closer to you."
+                heading="Find Your Nearest Orthopedic Clinic"
+                subheading="Two clinics — Attibele and HSR Layout — serving patients across South and South-East Bengaluru."
             />
 
             <LandingFaq
-                pageName="Orthopaedic Clinic Near Me in Bengaluru"
+                pageName="Orthopaedic Clinic Near Me in Bangalore"
                 pagePath="/orthopaedic-clinic-near-me"
                 subheading="Practical answers about visiting Dr. Nitin's orthopedic clinics."
                 items={[
                     {
-                        q: "Where is the nearest orthopaedic clinic to me?",
-                        a: "Dr. Nitin consults at two clinics in Bengaluru: Raghava Multispeciality Hospital, Attibele (convenient for Attibele, Anekal, Bommasandra, Chandapura, Hosur Road and Electronic City) and Health Nest Hospital, HSR Layout (convenient for HSR Layout, Koramangala, BTM Layout, Bellandur and Sarjapur Road). Pick whichever is closer and call to confirm timings.",
+                        q: "Where is the nearest orthopaedic clinic?",
+                        a: "Dr. Nitin N Sunku consults at two orthopedic clinics in Bengaluru: Raghava Multispeciality Hospital, Attibele (Sarjapura–Attibele Road) and Health Nest Hospital, HSR Layout (Sector 2, 24th Main Road). Between them they are convenient for Attibele, Anekal, Bommasandra, Chandapura, Electronic City, Hosur Road, HSR Layout, Koramangala, BTM Layout, Bellandur and Sarjapur Road.",
+                    },
+                    {
+                        q: "Is there an orthopedic clinic in HSR Layout?",
+                        a: "Yes. Dr. Nitin's HSR Layout orthopaedic clinic is at Health Nest Hospital, 1162, 24th Main Road, Garden Layout, Sector 2, HSR Layout, Bengaluru 560102. Call +91-9449031003 or use the booking form on this page to arrange a visit.",
+                    },
+                    {
+                        q: "What can I get treated at the clinic?",
+                        a: "Knee, shoulder, hip and ankle pain, sports injuries, ACL and meniscus tears, arthritis, fractures, back and neck pain, and regenerative treatments such as PRP. Surgical cases (arthroscopy, joint replacement) are assessed at the clinic and scheduled at the partner hospital.",
                     },
                     {
                         q: "Do I need an appointment, or can I walk in?",
-                        a: "Both work. Same-day and next-day appointments are usually available on consulting days, and walk-ins are seen based on the day's schedule. Calling or using the booking form first means less waiting.",
-                    },
-                    {
-                        q: "What conditions does the orthopedic clinic treat?",
-                        a: "Knee, shoulder, hip and ankle pain, sports injuries, ACL and meniscus tears, arthritis, fractures, back and neck pain, and regenerative treatments such as PRP. Surgical cases like arthroscopy and joint replacement are evaluated at the clinic and scheduled at the partner hospital.",
-                    },
-                    {
-                        q: "What are the clinic timings?",
-                        a: "The Attibele clinic runs Mon–Sat, 10:00 AM – 6:00 PM, and the HSR Layout clinic Mon–Sat, 10:00 AM – 8:00 PM. Timings can vary on consulting days, so it's best to confirm by phone or WhatsApp before visiting.",
+                        a: "Both work, but booking ahead is faster. Same-day and next-day slots are usually available on consulting days. Call or WhatsApp to confirm timings, or submit the booking form and the team will call you back within hours.",
                     },
                     {
                         q: "How much does a consultation cost?",
-                        a: "A consultation is typically ₹500–₹1,000 and includes a clinical examination and a written treatment plan. Imaging is advised only when it will genuinely change the treatment decision.",
+                        a: "A consultation typically costs ₹500–₹1,000 and includes a clinical examination and a written treatment plan. Imaging is advised only when it will genuinely change the treatment decision.",
                     },
                     {
                         q: "Do the clinics accept health insurance?",
-                        a: "Yes — insurance is accepted and the team assists with pre-authorisation for procedures such as arthroscopy and joint replacement. Outpatient consultations are usually paid out of pocket unless your policy covers OPD.",
+                        a: "Yes — insurance is accepted and the team assists with cashless pre-authorisation paperwork for procedures such as arthroscopy and joint replacement. Outpatient consultations are typically paid out of pocket unless your policy covers OPD.",
                     },
                 ]}
             />
 
             <FinalCtaStrip
                 clinic={CLINIC}
-                title="An Orthopedic Clinic Close to Home."
-                subtitle="Book at Attibele or HSR Layout today."
+                title="Expert Orthopedic Care, Close to Home."
+                subtitle="Book at the clinic nearest you today."
             />
 
             <MobileStickyCTA clinic={CLINIC} />
