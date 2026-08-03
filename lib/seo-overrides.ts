@@ -47,11 +47,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Looking for the best orthopedic surgeon in Attibele? What to look for, conditions treated, first-visit cost, and how to book with Dr. Nitin N Sunku at Raghava Hospital.",
     },
-    "knee-replacement-cost-in-bangalore": {
-        title: "Knee Replacement Cost in Bangalore 2026 | Honest Price Guide",
-        description:
-            "Knee replacement cost in Bangalore in 2026: realistic price ranges, what drives the cost, what's included, insurance and planning tips. Dr. Nitin N Sunku, Attibele.",
-    },
     "surgery-vs-injections-for-knee-pain": {
         title: "Surgery vs Injections for Knee Pain: Which Is Right? (2026)",
         description:
@@ -330,7 +325,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         title: "Anterior and Posterior Cruciate Ligament: Anatomy, Injuries, and the Right Treatment Path",
         description: "Understand the anterior and posterior cruciate ligament (ACL and PCL), how each gets injured, how to tell them apart, and which treatments work. Expert guidance from Dr. Nitin N Sunku, orthopedic and sports medicine specialist in Bengaluru.",
     },
-
     "asymptomatic-meniscus-tear": {
         title: "Asymptomatic Meniscus Tear: Symptoms, Causes, and Recovery Explained",
         description: "Learn everything about an asymptomatic meniscus tear — what it is, why it happens, when symptoms appear, and how to recover safely. Expert insights from Dr. Nitin N Sunku, orthopedic surgeon in Bengaluru.",

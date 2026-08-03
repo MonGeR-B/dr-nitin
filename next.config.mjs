@@ -48,6 +48,15 @@ const nextConfig = {
                 destination: '/blog/hip-resurfacing-vs-total-hip-replacement',
                 permanent: true,
             },
+            // The cost blog post was upgraded to a dedicated conversion money
+            // page (Jul 2026). 301 transfers its indexed equity; the post entry
+            // was removed from lib/data.ts so it no longer appears in the blog
+            // index or sitemap.
+            {
+                source: '/blog/knee-replacement-cost-in-bangalore',
+                destination: '/knee-replacement-cost-bangalore',
+                permanent: true,
+            },
         ];
     },
 };

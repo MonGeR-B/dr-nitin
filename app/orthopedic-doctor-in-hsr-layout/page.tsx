@@ -41,11 +41,19 @@ export const metadata: Metadata = {
     // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
     // template — without it the live <title> renders the brand twice.
     // Also trimmed: the previous 85-char title was truncated in SERPs.
-    title: { absolute: "Orthopedic Doctor in HSR Layout, Bengaluru | Dr. Nitin N Sunku" },
+    title: { absolute: "Bone Doctor in HSR Layout, Bengaluru | Dr. Nitin N Sunku" },
     description:
-        "Dr. Nitin N Sunku — trusted Orthopedic & Sports Medicine Specialist in HSR Layout, Bengaluru. Expert care for knee pain, joint replacement, sports injury, arthroscopy & fracture care. Same-day appointments available.",
+        "Dr. Nitin N Sunku — trusted bone doctor & orthopedic specialist in HSR Layout, Bengaluru. Expert care for knee pain, joint replacement, sports injury, arthritis, arthroscopy & fracture care. Same-day appointments with a top bone specialist in Bangalore.",
     alternates: { canonical: `${siteOrigin}/orthopedic-doctor-in-hsr-layout` },
     keywords: [
+        "bone doctor HSR Layout",
+        "bone doctor near me",
+        "best bone doctor near me",
+        "nearest bone doctor",
+        "bone specialist near me",
+        "nearby bone specialist",
+        "bone specialist Bangalore",
+        "bone specialists near me",
         "trusted orthopedic doctor HSR Layout",
         "orthopedic doctor HSR Layout",
         "best ortho doctor HSR Layout",
@@ -54,6 +62,14 @@ export const metadata: Metadata = {
         "knee pain doctor HSR Layout",
         "joint replacement HSR Layout",
         "sports injury doctor HSR Layout",
+        "sports orthopedic doctor HSR Layout",
+        "sports orthopedic doctor Bangalore",
+        "sports ortho doctor HSR",
+        "sports orthopedics",
+        "sports medicine specialist near me",
+        "orthopaedic clinic near me",
+        "orthopaedic clinic in HSR Layout",
+        "total knee replacement surgery",
         "arthroscopy surgeon HSR Layout",
         "Health Nest Hospital HSR Layout",
         "Dr. Nitin N Sunku",
@@ -63,13 +79,13 @@ export const metadata: Metadata = {
         "orthopedic specialist HSR Layout",
     ],
     openGraph: {
-        title: "Trusted Orthopedic Doctor in HSR Layout | Dr. Nitin N Sunku",
+        title: "Trusted Bone Doctor & Orthopedic Specialist in HSR Layout | Dr. Nitin Sunku",
         description:
-            "Same-day orthopedic appointments at our HSR Layout clinic. Knee, joint, sports injury, arthroscopy & fracture care.",
+            "Same-day appointments with a trusted bone doctor & orthopedic specialist at our HSR Layout clinic — knee, joint, sports injury, arthroscopy & fracture care.",
         url: `${siteOrigin}/orthopedic-doctor-in-hsr-layout`,
         type: "website",
     },
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },  // ads-only landing page: kept out of organic index; 'follow' preserves link equity to linked pages
 };
 
 // ---------- DATA ----------
@@ -89,7 +105,7 @@ const services = [
     },
     {
         title: "Sports Injury",
-        description: "Expert care for athletes & active individuals.",
+        description: "Sports orthopedic care for athletes & active individuals — ACL, ligament & cartilage injuries.",
         Icon: Sparkles,
         color: "from-emerald-500 to-emerald-600",
         bg: "bg-emerald-50",
@@ -216,7 +232,7 @@ export default function OrthopedicAttibeleLandingPage() {
                     <div className="flex items-center gap-2 min-w-0">
                         <img
                             src="https://ik.imagekit.io/vlries1el/dr%20nitin/dr-nitin-sunku-logo.svg"
-                            alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
+                            alt="Dr. Nitin N Sunku - Bone Doctor & Orthopedic Specialist in HSR Layout"
                             className="h-10 sm:h-12 w-auto flex-shrink-0"
                         />
                         <div className="min-w-0">
@@ -279,13 +295,13 @@ export default function OrthopedicAttibeleLandingPage() {
                                 </h1>
 
                                 <p className="text-lg sm:text-xl md:text-2xl text-blue-800 font-semibold mb-4">
-                                    Dr. Nitin N Sunku — Orthopedic &amp; Sports Medicine Specialist
+                                    Dr. Nitin N Sunku — Bone, Joint &amp; Sports Medicine Specialist
                                 </p>
                                 <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-xl leading-relaxed">
-                                    Dr. Nitin N Sunku is a trusted orthopedic doctor in HSR Layout and Bengaluru, specializing in sports injuries, arthroscopy, joint replacement, trauma care, and advanced orthopedic treatments. With over 10 years of experience, he is known for delivering evidence-based, patient-focused care using minimally invasive and arthroscopic techniques for faster recovery and long-term results.
+                                    Dr. Nitin N Sunku is a trusted bone doctor and orthopedic specialist in HSR Layout, Bengaluru, specializing in sports injuries, arthroscopy, joint replacement, trauma care, and advanced orthopedic treatments. With over 10 years of experience, he is known for delivering evidence-based, patient-focused care using minimally invasive and arthroscopic techniques for faster recovery and long-term results.
                                 </p>
                                 <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-xl leading-relaxed">
-                                    Patients searching for an orthopedic doctor near me or orthopedic doctor Bangalore trust Dr. Sunku for expert care in knee pain, shoulder injuries, fractures, arthritis, ligament injuries, and sports medicine. He currently serves as Team Doctor for Bengaluru Football Club and consults at leading hospitals in Bengaluru.
+                                    If you have been searching for a bone doctor near me, a bone specialist in Bangalore, or the best orthopedic doctor in HSR Layout, Dr. Sunku provides expert care for knee pain, shoulder injuries, fractures, arthritis, ligament injuries and sports medicine. He currently serves as Team Doctor for Bengaluru Football Club and consults at leading hospitals in Bengaluru. For those considering surgery, he also performs total knee replacement — see our detailed <a href="/knee-replacement-cost-bangalore" className="text-blue-700 font-semibold hover:text-blue-900 underline underline-offset-2">knee replacement surgery cost in Bangalore</a> guide.
                                 </p>
 
                                 {/* HSR Layout clinic chip */}
@@ -365,7 +381,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] w-full">
                                     <Image
                                         src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-lp"
-                                        alt="Dr. Nitin N Sunku — Orthopedic & Sports Medicine Specialist"
+                                        alt="Dr. Nitin N Sunku — Bone Specialist & Orthopedic Doctor in HSR Layout, Bengaluru"
                                         fill
                                         priority
                                         className="object-contain object-center drop-shadow-2xl"
@@ -615,7 +631,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 </span>
                             </h2>
                             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                                Advanced treatment options for every orthopedic condition — all under one roof.
+                                Advanced treatment options from a trusted bone specialist for every orthopedic condition — all under one roof.
                             </p>
                         </div>
                     </FadeIn>
@@ -653,7 +669,7 @@ export default function OrthopedicAttibeleLandingPage() {
                             <div className="relative h-[420px] lg:h-full min-h-[420px] rounded-3xl overflow-hidden border border-gray-200 shadow-xl bg-gradient-to-br from-blue-50 via-white to-indigo-50">
                                 <Image
                                     src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-lp"
-                                    alt="Dr. Nitin N Sunku"
+                                    alt="Dr. Nitin N Sunku — Bone Doctor in HSR Layout"
                                     fill
                                     className="object-contain object-center"
                                     sizes="(max-width: 1024px) 100vw, 400px"
@@ -871,13 +887,13 @@ export default function OrthopedicAttibeleLandingPage() {
                                 — Visit Our Clinic —
                             </span>
                             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
-                                Expert Orthopedic Doctor in HSR Layout with{" "}
+                                Expert Bone Doctor &amp; Orthopedic Specialist in HSR Layout with{" "}
                                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                     Advanced, Evidence-Based Treatments
                                 </span>
                             </h2>
                             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                                Visit Our Clinics — Expert Orthopedic Doctor in HSR Layout with Advanced, Evidence-Based Treatments.
+                                Visit Our Clinics — Expert Bone Doctor &amp; Orthopedic Specialist in HSR Layout with Advanced, Evidence-Based Treatments.
                             </p>
                         </div>
                     </FadeIn>
@@ -1024,6 +1040,14 @@ export default function OrthopedicAttibeleLandingPage() {
                 subheading="Practical answers about consulting Dr. Nitin at Health Nest Hospital, HSR Layout."
                 items={[
                     {
+                        q: "Is Dr. Nitin a bone specialist or an orthopedic doctor?",
+                        a: "Both describe the same field. 'Bone doctor' and 'bone specialist' are the everyday names for an orthopedic doctor — a specialist in bones, joints, ligaments and muscles. Dr. Nitin N Sunku is a fellowship-trained orthopedic and sports medicine specialist, so whether you are looking for a bone specialist in Bangalore or a bone doctor near HSR Layout, you are in the right place.",
+                    },
+                    {
+                        q: "How do I find the best bone doctor near me in HSR Layout?",
+                        a: "Look for a fellowship-trained orthopedic specialist with focused experience in your specific problem, an honest conservative-first approach, and a clinic close enough for easy follow-up. Dr. Nitin consults at Health Nest Hospital in HSR Layout Sector 2 — call +91-9449031003 or use the booking form on this page to arrange a visit.",
+                    },
+                    {
                         q: "Where does Dr. Nitin consult in HSR Layout?",
                         a: "At Health Nest Hospital, 1162, 24th Main Road, Garden Layout, Sector 2, HSR Layout, Bengaluru 560102. Call +91-9449031003 to confirm timings, or book through the form on this page for a same-day slot where available.",
                     },
@@ -1046,6 +1070,14 @@ export default function OrthopedicAttibeleLandingPage() {
                     {
                         q: "Is surgery always recommended for joint problems?",
                         a: "No. The practice follows a conservative-first philosophy: physiotherapy, medication, lifestyle changes and targeted injections are exhausted before surgery is discussed. Surgery is recommended only when the evidence clearly supports it for your specific condition.",
+                    },
+                    {
+                        q: "Does Dr. Nitin treat sports injuries as a sports orthopedic doctor?",
+                        a: "Yes. As Team Doctor for Bengaluru Football Club, Dr. Nitin is a sports orthopedic doctor in HSR Layout with focused expertise in sports orthopedics and sports medicine — ACL and ligament injuries, cartilage and meniscus problems, tendon injuries, and safe return-to-play rehabilitation. If you are looking for a sports orthopedic doctor in Bangalore, the same standards used for professional players apply to weekend runners and gym-goers.",
+                    },
+                    {
+                        q: "Is there an orthopaedic clinic near me in HSR Layout?",
+                        a: "Yes — Dr. Nitin's orthopaedic clinic in HSR Layout is at Health Nest Hospital, Sector 2, 24th Main Road, convenient for patients across HSR Layout, Koramangala, BTM Layout, Bellandur and Sarjapur Road. Call +91-9449031003 or use the booking form on this page to arrange a visit.",
                     },
                 ]}
             />
