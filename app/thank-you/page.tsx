@@ -5,6 +5,7 @@ import { CheckCircle2, ArrowRight, Home, Mail, Phone, Calendar, BookOpen } from 
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/fade-in";
 import { siteConfig } from "@/lib/data";
+import { siteOrigin } from "@/lib/site-url";
 
 // Google Ads conversion: prefer env override, fall back to the value previously
 // hard-coded inline so existing deployments keep working.
@@ -13,8 +14,10 @@ const GOOGLE_ADS_CONVERSION =
     "AW-11392406445/G95dCKqvm8gZEK2nqbgq";
 
 export const metadata: Metadata = {
-    title: "Thank You | Dr. Nitin N Sunku",
+    title: { absolute: "Thank You | Dr. Nitin N Sunku" },
     description: "Thank you for reaching out to Dr. Nitin N Sunku. We have received your message and will get back to you shortly.",
+    alternates: { canonical: `${siteOrigin}/thank-you` },
+    robots: { index: false, follow: true },
 };
 
 export default function ThankYouPage() {

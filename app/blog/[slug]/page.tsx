@@ -10,6 +10,7 @@ import { ReadingProgress } from "@/components/blog/reading-progress";
 import { SocialShare } from "@/components/blog/social-share";
 import { AuthorBio } from "@/components/blog/author-bio";
 import { RelatedPosts } from "@/components/blog/related-posts";
+import { InternalLinksBlock } from "@/components/blog/internal-links-block";
 import { FadeIn } from "@/components/animations/fade-in";
 import "../blog-content.css";
 
@@ -231,6 +232,11 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                             <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }} />
                         </FadeIn>
 
+                        {/* Contextual interlinks (>=3 relevant internal links) */}
+                        <FadeIn delay={0.25}>
+                            <InternalLinksBlock slug={post.slug} />
+                        </FadeIn>
+
                         {/* Author Bio */}
                         <FadeIn delay={0.3}>
                             <AuthorBio />
@@ -241,7 +247,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                             <div className="relative z-10">
                                 <h3 className="text-2xl font-bold mb-4">Experiencing symptoms?</h3>
-                                <p className="text-blue-100 mb-8 max-w-xl mx-auto text-lg">Don't let pain hold you back. Schedule a comprehensive evaluation with Dr. Nitin today.</p>
+                                <p className="text-blue-100 mb-8 max-w-xl mx-auto text-lg">Don&apos;t let pain hold you back. Schedule a comprehensive evaluation with Dr. Nitin today.</p>
                                 <Button size="lg" variant="white" className="h-14 px-8 text-primary font-bold" asChild>
                                     <Link href="/contact">Book Appointment <ChevronRight className="ml-2 h-4 w-4" /></Link>
                                 </Button>
