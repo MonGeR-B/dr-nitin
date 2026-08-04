@@ -7,7 +7,7 @@ import { siteOrigin } from '@/lib/site-url'
 // used `new Date()`, so every build claimed the entire site had just changed —
 // Google learns to distrust and ignore lastmod when it's always "now".
 // Bump this date only when site-wide content genuinely changes.
-const SITE_CONTENT_UPDATED = new Date('2026-07-18')
+const SITE_CONTENT_UPDATED = new Date('2026-08-04')
 
 /** Parse blog-post display dates like "Mar 2, 2026"; fall back to the site date. */
 function postDate(dateStr?: string): Date {
@@ -76,6 +76,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: '/orthopedic-doctor-near-hosur', priority: 0.8 },
         { path: '/pediatric-orthopedic-bangalore', priority: 0.8 },
         { path: '/insurance-cashless-orthopedic-treatment', priority: 0.7 },
+        // Aug 2026: the HSR Layout page was flipped from ads-only noindex to
+        // indexed — it is now the site's only organic page for the HSR clinic.
+        // The other HSR / near-me variants stay noindex so nothing cannibalises it.
+        { path: '/orthopedic-doctor-in-hsr-layout', priority: 0.8 },
+        // Aug 2026 money pages: spine (slipped disc) and foot/ankle — two body
+        // regions with orphaned blog clusters and no commercial page until now.
+        { path: '/slip-disc-treatment-bangalore', priority: 0.8 },
+        { path: '/foot-ankle-pain-bangalore', priority: 0.8 },
         { path: '/privacy-policy', priority: 0.3 },
         { path: '/terms', priority: 0.3 },
     ]

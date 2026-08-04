@@ -22,6 +22,26 @@ export interface SeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+    "slip-disc-surgery-cost-in-bangalore": {
+        title: "Slip Disc Surgery Cost in Bangalore (2026 Ranges)",
+        description:
+            "Indicative Bengaluru cost ranges for slipped disc care — MRI, physiotherapy, epidural injection, microdiscectomy and endoscopic discectomy — plus why most people never need surgery.",
+    },
+    "how-long-does-a-slipped-disc-take-to-heal": {
+        title: "How Long Does a Slipped Disc Take to Heal?",
+        description:
+            "A realistic week-by-week slipped disc recovery timeline, what disc resorption actually is, why repeat MRIs rarely help, and the red flags that mean it is not just a slow recovery.",
+    },
+    "why-does-my-heel-hurt-in-the-morning": {
+        title: "Why Does My Heel Hurt in the Morning? Causes & Fixes",
+        description:
+            "Sharp heel pain on your first steps out of bed is usually plantar fasciopathy. What causes it, why the heel spur is not the villain, what actually helps, and when to see a doctor.",
+    },
+    "desk-job-back-and-neck-pain-bangalore-it-professionals": {
+        title: "Desk Job Back & Neck Pain: A Bengaluru IT Guide",
+        description:
+            "The five back, neck and shoulder patterns seen across Bengaluru's IT corridor, the workstation changes that actually matter, and when the pain stops being a posture problem.",
+    },
     "stress-fracture-treatment-symptoms-causes-recovery": {
         title: "Stress Fracture Treatment: Symptoms, Causes, and Recovery Guide",
         description:

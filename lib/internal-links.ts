@@ -88,6 +88,8 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["sports", "shin-splints", "achilles", "tendon", "tendinopathy", "tendonitis", "rehabilitation", "ankle", "elbow"],
     links: [
+      { label: "Foot, heel & ankle pain specialist in Bangalore", href: "/foot-ankle-pain-bangalore" },
+      { label: "Why does my heel hurt in the morning?", href: "/blog/why-does-my-heel-hurt-in-the-morning" },
       { label: "Sports Medicine service", href: "/services/sports-medicine" },
       { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
       { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
@@ -97,6 +99,8 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["spine", "posture", "herniated-disc", "back", "neck", "cervical"],
     links: [
+      { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+      { label: "How long does a slipped disc take to heal?", href: "/blog/how-long-does-a-slipped-disc-take-to-heal" },
       { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
       { label: "Spine Care service", href: "/services/spine-care" },
       { label: "How posture affects spine and joint health", href: "/blog/how-posture-affects-spine-and-joint-health" },
@@ -129,6 +133,34 @@ const GENERIC_LINKS: InternalLink[] = [
  * first; topical fallbacks fill any remaining slots up to 3–5 total.
  */
 const CURATED_LINKS: Record<string, InternalLink[]> = {
+  "slip-disc-surgery-cost-in-bangalore": [
+    { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+    { label: "How long does a slipped disc take to heal?", href: "/blog/how-long-does-a-slipped-disc-take-to-heal" },
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+    { label: "Lumbar disc herniation surgery in India", href: "/blog/lumbar-disc-herniation-surgery-india" },
+    { label: "Back pain specialist in Bangalore", href: "/back-pain-bangalore" },
+  ],
+  "how-long-does-a-slipped-disc-take-to-heal": [
+    { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+    { label: "Slip disc surgery cost in Bangalore", href: "/blog/slip-disc-surgery-cost-in-bangalore" },
+    { label: "Sciatica treatment without surgery", href: "/blog/sciatica-treatment-without-surgery-india" },
+    { label: "Lower back pain physiotherapy protocol", href: "/blog/lower-back-pain-physiotherapy-protocol-india" },
+    { label: "Back pain specialist in Bangalore", href: "/back-pain-bangalore" },
+  ],
+  "why-does-my-heel-hurt-in-the-morning": [
+    { label: "Foot, heel & ankle pain specialist in Bangalore", href: "/foot-ankle-pain-bangalore" },
+    { label: "Phases of Achilles tendinopathy", href: "/blog/phases-of-achilles-tendinopathy" },
+    { label: "Stress fracture treatment, symptoms and recovery", href: "/blog/stress-fracture-treatment-symptoms-causes-recovery" },
+    { label: "Ultrasound-guided orthopedic injections", href: "/treatments/ultrasound-guided-orthopedic-injections" },
+    { label: "Sports injury doctor in Bangalore", href: "/sports-injury-doctor-bangalore" },
+  ],
+  "desk-job-back-and-neck-pain-bangalore-it-professionals": [
+    { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
+    { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+    { label: "Orthopedic doctor near Electronic City", href: "/orthopedic-doctor-electronic-city" },
+    { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
+    { label: "How posture affects spine and joint health", href: "/blog/how-posture-affects-spine-and-joint-health" },
+  ],
   "best-orthopedic-surgeon-in-attibele": [
     { label: "Knee replacement cost in Bangalore", href: "/knee-replacement-cost-bangalore" },
     { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
