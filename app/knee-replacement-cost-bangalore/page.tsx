@@ -188,7 +188,10 @@ export default function KneeReplacementCostBangalorePage() {
                                 </span>
 
                                 <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-4 break-words">
-                                    <span className="block">Knee Replacement</span>
+                                    {/* The trailing {" "} is load-bearing: without it the two
+                                        block spans concatenate in extracted text and Google
+                                        reads the H1 as "Knee ReplacementCost in Bangalore". */}
+                                    <span className="block">Knee Replacement{" "}</span>
                                     <span className="block bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1">
                                         Cost in Bangalore
                                     </span>
@@ -608,7 +611,7 @@ export default function KneeReplacementCostBangalorePage() {
             />
 
             <MobileStickyCTA clinic={CLINIC} />
-            <LandingFooter clinic={CLINIC} />
+            <LandingFooter clinic={CLINIC} currentPath="/knee-replacement-cost-bangalore" />
         </main>
     );
 }

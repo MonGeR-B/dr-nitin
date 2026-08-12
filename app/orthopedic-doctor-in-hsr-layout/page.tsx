@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
     // template — without it the live <title> renders the brand twice.
     // Also trimmed: the previous 85-char title was truncated in SERPs.
-    title: { absolute: "Bone Doctor in HSR Layout, Bengaluru | Dr. Nitin N Sunku" },
+    title: { absolute: "Orthopedic Doctor in HSR Layout, Bangalore | Dr. Nitin Sunku" },
     description:
         "Dr. Nitin N Sunku — trusted bone doctor & orthopedic specialist in HSR Layout, Bengaluru. Expert care for knee pain, joint replacement, sports injury, arthritis, arthroscopy & fracture care. Same-day appointments with a top bone specialist in Bangalore.",
     alternates: { canonical: `${siteOrigin}/orthopedic-doctor-in-hsr-layout` },
@@ -85,7 +85,9 @@ export const metadata: Metadata = {
         url: `${siteOrigin}/orthopedic-doctor-in-hsr-layout`,
         type: "website",
     },
-    robots: { index: false, follow: true },  // ads-only landing page: kept out of organic index; 'follow' preserves link equity to linked pages
+    // Indexed (Aug 2026): this is now the site's organic page for the HSR Layout
+    // clinic. The other HSR/near-me variants stay noindex so nothing cannibalises it.
+    robots: { index: true, follow: true },
 };
 
 // ---------- DATA ----------
@@ -94,6 +96,23 @@ const PRIMARY_PHONE = HSR_CLINIC.phone;
 const PRIMARY_PHONE_DIGITS = HSR_CLINIC.phoneDigits;
 const WHATSAPP_MESSAGE =
     "Hi Dr. Nitin, I would like to book an appointment.";
+
+// Crawl paths out of this page. It hides the global nav (ads-conversion layout),
+// so without these the page would be an organic dead end for Googlebot.
+const RELATED_LINKS = [
+    { label: "Orthopedic doctor in Attibele", href: "/orthopedic-doctor-attibele" },
+    { label: "Knee pain treatment in Bangalore", href: "/knee-pain-bangalore" },
+    { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
+    { label: "Back pain & spine care in Bangalore", href: "/back-pain-bangalore" },
+    { label: "Neck pain & cervical spondylosis", href: "/neck-pain-bangalore" },
+    { label: "Hip pain & AVN treatment", href: "/hip-pain-bangalore" },
+    { label: "Arthritis treatment in Bangalore", href: "/arthritis-treatment-bangalore" },
+    { label: "Sports injury doctor in Bangalore", href: "/sports-injury-doctor-bangalore" },
+    { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
+    { label: "Knee replacement cost in Bangalore", href: "/knee-replacement-cost-bangalore" },
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+    { label: "About Dr. Nitin N Sunku", href: "/about" },
+];
 
 const services = [
     {
@@ -288,7 +307,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 </span>
 
                                 <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-4 break-words">
-                                    <span className="block">Trusted Orthopedic Doctor</span>
+                                    <span className="block">Trusted Orthopedic Doctor{" "}</span>
                                     <span className="block bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1">
                                         in HSR Layout
                                     </span>
@@ -849,7 +868,7 @@ export default function OrthopedicAttibeleLandingPage() {
 
                         <FadeIn delay={0.1}>
                             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-white/50">
-                                <BookingForm source="ads-best-orthopedic" />
+                                <BookingForm source="hsr-layout-page" />
                             </div>
                         </FadeIn>
 
@@ -1155,6 +1174,31 @@ export default function OrthopedicAttibeleLandingPage() {
 
             {/* Spacer */}
             <div className="md:hidden h-16" />
+
+            {/* Explore more — internal crawl paths (added when this page was indexed) */}
+            <section className="bg-white border-t border-gray-100 py-14">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 text-center">
+                        Explore Orthopedic Care at Our HSR Layout &amp; Attibele Clinics
+                    </h2>
+                    <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto text-sm sm:text-base">
+                        Dr. Nitin N Sunku consults in HSR Layout, Bengaluru and at the Attibele
+                        clinic. Browse condition-specific guidance and treatment costs below.
+                    </p>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {RELATED_LINKS.map((link) => (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                className="group flex items-center gap-2 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-800"
+                            >
+                                <ChevronRight className="w-4 h-4 shrink-0 text-blue-600 transition group-hover:translate-x-0.5" />
+                                <span>{link.label}</span>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* Footer */}
             <footer className="bg-gray-900 text-gray-400 py-8 text-center text-sm">

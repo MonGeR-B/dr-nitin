@@ -175,7 +175,7 @@ export default function InsuranceCashlessOrthopedicTreatmentPage() {
                                 </span>
 
                                 <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-4 break-words">
-                                    <span className="block">Insurance &amp; Cashless</span>
+                                    <span className="block">Insurance &amp; Cashless{" "}</span>
                                     <span className="block bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1">
                                         Orthopedic Treatment
                                     </span>
@@ -552,7 +552,7 @@ export default function InsuranceCashlessOrthopedicTreatmentPage() {
             />
 
             <MobileStickyCTA clinic={CLINIC} />
-            <LandingFooter clinic={CLINIC} />
+            <LandingFooter clinic={CLINIC} currentPath="/insurance-cashless-orthopedic-treatment" />
         </main>
     );
 }

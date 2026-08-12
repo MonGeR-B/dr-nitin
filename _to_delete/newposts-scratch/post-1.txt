@@ -1,0 +1,180 @@
+  {
+    slug: "slip-disc-surgery-cost-in-bangalore",
+    title: "Slip Disc Surgery Cost in Bangalore (2026): Honest Ranges &mdash; and Why Most People Never Need the Operation",
+    excerpt: "What slipped disc treatment actually costs in Bengaluru &mdash; consultation, MRI, physiotherapy, injections, microdiscectomy, endoscopic discectomy and fusion &mdash; explained as indicative ranges, alongside the more useful point: the large majority of disc herniations settle without surgery at a fraction of the cost.",
+    date: "Aug 4, 2026",
+    category: "Spine Health",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>Almost nobody searches for the cost of slip disc surgery out of curiosity. People search for it late at night, days after an MRI report used words like &quot;prolapse,&quot; &quot;extrusion&quot; or &quot;nerve root compression,&quot; and after somebody quoted a number that made the family go quiet. The question underneath is rarely arithmetic. It is: how much damage will this do, and is there a way out of it?</p>
+
+      <p>This guide answers the money question with wide indicative ranges for Bengaluru rather than a fake precise figure. It also answers the question most cost pages skip: whether you need the operation at all. For a large majority of people who arrive in clinic with a frightening lumbar MRI, the honest answer is no.</p>
+
+      <p><strong>Quick answer:</strong> Conservative care for a slipped disc &mdash; consultation, imaging where genuinely indicated, a structured physiotherapy course, activity modification and time &mdash; typically costs a small fraction of surgery, and it is what resolves the large majority of lumbar disc herniations. Surgery cost ranges in Bengaluru are genuinely wide because they depend on the approach used, the hospital category, the room type chosen, whether implants are involved, and the length of stay. Every figure on this page is an indicative range for planning purposes only. It is not a quote, and no responsible number can be attached to your case until a specific procedure has actually been recommended after examination and imaging review.</p>
+
+      <h2>Start with the fact that changes the budget most</h2>
+
+      <p>The single biggest determinant of what your back problem costs you is not which hospital you pick or which technique you choose. It is whether you need an operation in the first place.</p>
+
+      <p>Most lumbar disc herniations improve over weeks to a few months without surgery. Disc material pressing on a nerve is, in a meaningful proportion of cases, gradually reabsorbed &mdash; and counter-intuitively, the more dramatic-looking extrusions and free fragments often have the greatest tendency to shrink. Meanwhile, a disc bulge on MRI is an extremely common finding in people with no back pain at all. A report is a photograph of anatomy, not a diagnosis of your symptoms.</p>
+
+      <p>This is why the honest conversation in clinic starts with the examination rather than the scan &mdash; whether there is genuine nerve compromise, whether power in the leg is dropping, how the pain has behaved over time, and whether red flags are present. The detailed clinical picture is set out on the <a href="/slip-disc-treatment-bangalore">slip disc treatment page for Bengaluru patients</a>, and the non-surgical route is covered step by step in the guide to <a href="/blog/sciatica-treatment-without-surgery-india">sciatica treatment without surgery in India</a>.</p>
+
+      <h2>Indicative cost ranges for slipped disc care in Bengaluru</h2>
+
+      <p>The table below gives wide indicative ranges seen across Bengaluru, from smaller neighbourhood hospitals to large corporate chains. The ranges are broad on purpose: anyone quoting a single number before knowing your level, your neurology and your hospital category is guessing. Treat this as a planning aid, not a quotation.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Indicative range in Bengaluru (not a quote)</th>
+            <th>What moves it within the range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Specialist orthopedic or spine consultation</td>
+            <td>&#8377;500 &ndash; &#8377;1,500</td>
+            <td>Hospital category; whether a follow-up review is charged separately</td>
+          </tr>
+          <tr>
+            <td>X-ray lumbar spine (standing, two views)</td>
+            <td>&#8377;300 &ndash; &#8377;1,500</td>
+            <td>Standalone centre versus hospital radiology; flexion-extension views add cost</td>
+          </tr>
+          <tr>
+            <td>MRI lumbar spine (plain, no contrast)</td>
+            <td>&#8377;3,500 &ndash; &#8377;12,000</td>
+            <td>Scanner strength, centre category, contrast if added, urgency of reporting</td>
+          </tr>
+          <tr>
+            <td>Structured physiotherapy course (roughly 10 to 12 supervised sessions)</td>
+            <td>&#8377;4,000 &ndash; &#8377;20,000</td>
+            <td>Per-session versus package pricing, clinic versus home visits, therapist experience</td>
+          </tr>
+          <tr>
+            <td>Image-guided epidural steroid injection or selective nerve root block</td>
+            <td>&#8377;8,000 &ndash; &#8377;40,000</td>
+            <td>Day-care versus admitted setting, imaging guidance used, hospital category</td>
+          </tr>
+          <tr>
+            <td>Microdiscectomy, single level (surgery plus routine stay)</td>
+            <td>&#8377;1,20,000 &ndash; &#8377;3,00,000</td>
+            <td>Hospital tier, room category, surgeon and anaesthesia fees, length of stay</td>
+          </tr>
+          <tr>
+            <td>Endoscopic discectomy, single level</td>
+            <td>&#8377;1,80,000 &ndash; &#8377;4,00,000</td>
+            <td>Disposable instrumentation, anaesthesia type, hospital tier, day-care versus overnight</td>
+          </tr>
+          <tr>
+            <td>Lumbar fusion, single level (only where instability is demonstrated)</td>
+            <td>&#8377;3,00,000 &ndash; &#8377;6,50,000 and above</td>
+            <td>Implant system and number of screws, number of levels, stay, ICU time if any</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Read the top and bottom of that table together. The entire conservative pathway &mdash; consultation, X-ray, MRI and a full supervised physiotherapy course &mdash; usually lands in the low tens of thousands of rupees. A single-level fusion can be many times that. That gap is why it is worth being genuinely certain surgery is necessary before you cross it.</p>
+
+      <h2>What most people actually spend</h2>
+
+      <p>A typical non-surgical episode looks like this. A first consultation with a proper history and neurological examination. An X-ray if a structural or alignment problem is suspected. An MRI if leg symptoms are significant, persistent, or if nerve function is a concern &mdash; not automatically on day one, because a scan taken too early frequently changes nothing except your anxiety level. Then structured rehabilitation, sensible load management, medication for a defined period, and a review to confirm the trajectory.</p>
+
+      <p>Where leg pain is severe and not settling, an image-guided epidural or nerve root block can be added. Be clear about what it does: it reduces inflammation around an irritated nerve root and buys a window of relief in which rehabilitation becomes possible. It is not a repair and not a substitute for the rehabilitation itself. Used well it sometimes prevents an operation; repeated indefinitely as a standalone fix, it becomes an expensive way of avoiding a decision.</p>
+
+      <p>The broader approach to persistent spinal pain, including the non-disc causes that get mislabelled as slipped disc, is covered on the <a href="/back-pain-bangalore">back pain evaluation page</a> and in the <a href="/services/spine-care">spine care service overview</a>.</p>
+
+      <h2>What drives the number up or down</h2>
+
+      <p>When two people with the same MRI and the same operation receive bills that differ by a factor of three, it is almost never the surgery that differs. It is these variables.</p>
+
+      <ul>
+        <li><strong>Hospital tier.</strong> The largest single driver. The same single-level discectomy in a mid-sized hospital and in a large corporate chain can differ dramatically, because the base tariff for theatre, nursing, investigations and consumables differs.</li>
+        <li><strong>Room category.</strong> Underrated and frequently decisive. In most Indian hospital tariff structures, the room category does not just change the room charge &mdash; it scales surgeon, nursing, theatre and sometimes investigation charges for that admission. A suite over a shared room moves the total far more than the room rate difference suggests.</li>
+        <li><strong>Surgeon and anaesthetist fees.</strong> Vary with experience and with hospital category, and are often expressed as a band rather than a fixed figure.</li>
+        <li><strong>Implant versus no implant.</strong> A microdiscectomy or endoscopic discectomy uses no implant. A fusion uses screws, rods and often a cage, and implant cost alone can account for a large share of the difference between a decompression and a fusion.</li>
+        <li><strong>Length of stay.</strong> Every additional night carries room, nursing, medication and monitoring charges. An uncomplicated decompression may involve a short stay; a fusion typically involves longer.</li>
+        <li><strong>Anaesthesia type.</strong> Some endoscopic procedures can be done under local or spinal anaesthesia in selected patients; general anaesthesia carries different charges and different monitoring requirements.</li>
+        <li><strong>Physiotherapy.</strong> Almost always billed separately from the surgical package, and almost always necessary. Budget for it deliberately rather than discovering it afterwards.</li>
+        <li><strong>Complications.</strong> Uncommon, but the honest reason no fixed number can be promised. A wound problem, a dural tear, a recurrence or a medical complication changes the stay and therefore the bill.</li>
+      </ul>
+
+      <h2>Microdiscectomy or endoscopic discectomy: does the price difference buy anything</h2>
+
+      <p>Endoscopic discectomy generally sits higher in the range, mainly because of disposable instrumentation and the theatre setup involved. In the right patient &mdash; typically a contained single-level herniation in an anatomically favourable position &mdash; the keyhole approach involves less muscle disruption and often a quicker return to light activity. That has real value for someone who needs to get back to a desk job quickly.</p>
+
+      <p>What the higher price does not buy is a better outcome in every situation. For migrated fragments, certain anatomical positions, and cases needing wider decompression, a well-performed microdiscectomy remains the more appropriate operation, and stretching an endoscopic approach to fit a case it does not suit is no bargain at any price. Candidacy is dealt with in the guides to <a href="/blog/endoscopic-spine-surgery-india">endoscopic spine surgery in India</a> and to <a href="/blog/lumbar-disc-herniation-surgery-india">lumbar disc herniation surgery in India</a>.</p>
+
+      <h2>Fusion belongs in a different conversation</h2>
+
+      <p>Fusion appears in the table because people ask about it, not because it is a routine treatment for a herniated disc. A straightforward disc herniation causing leg pain is usually addressed by decompressing the nerve, not by fusing the segment. Fusion enters the discussion when there is demonstrated instability, significant slippage, deformity, or a specific situation such as a recurrent herniation with segmental instability.</p>
+
+      <p>The reason to be precise is financial as well as clinical. Fusion carries implant cost, a longer stay, a longer recovery and permanent alteration of that segment. If fusion is proposed, the question to ask is not what it costs, but what specifically demonstrates instability in your case.</p>
+
+      <h2>How health insurance generally works for spine treatment</h2>
+
+      <p>This section is deliberately generic. Policy terms differ enormously, and the only source of truth for your cover is your own policy document and your insurer&#39;s written confirmation. What follows is the general architecture that applies to most Indian indemnity health policies, so that you know which questions to ask.</p>
+
+      <ul>
+        <li><strong>Waiting periods.</strong> Most policies have an initial waiting period from the date the policy starts, plus longer specified waiting periods for certain listed conditions and procedures. Spine and joint procedures commonly appear on those specified lists. A policy bought after the back pain started is unlikely to help with that episode.</li>
+        <li><strong>Pre-existing disease clauses.</strong> If the condition existed or was diagnosed before the policy began, a separate and typically longer waiting period usually applies. Non-disclosure at the time of buying is the most common cause of claims being rejected later, so accuracy at application stage protects you.</li>
+        <li><strong>Room rent capping.</strong> Many policies cap the eligible room category or daily room rent. If you occupy a room above the eligible category, some policies apply proportionate deduction across the whole bill &mdash; not just the room charge. This is the clause that most often produces an unexpected shortfall at discharge, and it is worth checking before admission rather than after.</li>
+        <li><strong>Sub-limits, co-pay and deductibles.</strong> Some policies cap specific procedures, cap consumables, or require you to bear a fixed percentage. Older-age and top-up policies more often carry co-pay.</li>
+        <li><strong>Pre-authorisation.</strong> For planned surgery, the hospital submits clinical documentation and an estimate to the insurer before admission, and the insurer responds with an approved amount. That approval is based on medical necessity being documented &mdash; which is one more reason the clinical justification for surgery needs to be genuine and written down.</li>
+        <li><strong>Cashless versus reimbursement.</strong> Cashless means the settlement happens between hospital and insurer, and you pay only the non-covered portion. Reimbursement means you pay and claim afterwards with the full documentation set. Cashless depends on the hospital having an arrangement with your insurer, so confirm this in advance for the specific hospital where the surgery is planned.</li>
+        <li><strong>What is usually not covered.</strong> Outpatient physiotherapy, consultations before admission, and investigations done outside the admission window frequently fall outside inpatient cover unless the policy has specific outpatient benefits.</li>
+      </ul>
+
+      <p>Practically, the sequence that avoids unpleasant surprises is: read your own policy schedule, ask the hospital insurance desk for a written itemised estimate, obtain pre-authorisation in writing before admission, and confirm which items are excluded. General guidance on how the cashless process is handled is set out on the <a href="/insurance-cashless-orthopedic-treatment">insurance and cashless treatment page</a>. No claim is ever guaranteed by a hospital or a doctor &mdash; only your insurer can confirm your cover.</p>
+
+      <h2>Why the cheapest option is often not the cheapest</h2>
+
+      <p>Two versions of a false economy show up repeatedly.</p>
+
+      <p>The first is the unnecessary operation. Its true cost is not the bill. It is the recovery period, the time off work, the scar tissue that makes any future intervention harder, and the possibility of a recurrence. A discectomy performed for back pain with a coincidental disc bulge and no genuine nerve compression is a poor investment even at the lowest price in the city. The comparison that matters is not one hospital&#39;s quote against another&#39;s. It is the operation against the alternative of not having it.</p>
+
+      <p>The second is the under-rehabbed recovery. People spend lakhs on surgery and then decline a physiotherapy package costing a few thousand rupees. Decompression relieves pressure on a nerve; it does not restore the trunk strength, movement patterns or load tolerance lost during months of guarded, painful living. Skipping rehabilitation is the most reliable way to end up dissatisfied with a technically sound operation.</p>
+
+      <h2>Questions to ask before you agree to spine surgery</h2>
+
+      <ul>
+        <li>What specifically on my examination, not just my scan, indicates that surgery is needed?</li>
+        <li>Which nerve root is involved, and what exactly is compressing it?</li>
+        <li>How long have I actually had these symptoms, and have I completed a fair trial of structured conservative care?</li>
+        <li>What happens if I wait another six to eight weeks? What would make waiting unsafe?</li>
+        <li>Why this approach rather than the alternatives, in my particular anatomy?</li>
+        <li>Are implants being used? If yes, what makes fusion necessary rather than decompression alone?</li>
+        <li>What is the expected length of stay, and what would extend it?</li>
+        <li>Can I have a written, itemised estimate covering surgeon fee, anaesthesia, theatre, implants, consumables, room, investigations and expected medication?</li>
+        <li>Which items in that estimate are typically not covered by insurance?</li>
+        <li>What does rehabilitation after this operation involve, how long does it run, and what will it cost?</li>
+        <li>What are the realistic chances of recurrence, and what happens if it recurs?</li>
+      </ul>
+
+      <p>A surgeon who is confident about the indication will answer all of these without irritation. Difficulty in answering them is itself information.</p>
+
+      <h2>Frequently asked questions</h2>
+
+      <p><strong>Is slip disc surgery covered by insurance?</strong><br/>Most indemnity health policies cover medically necessary inpatient spine surgery, subject to waiting periods, pre-existing disease clauses, room rent capping, sub-limits and any co-pay in your policy. Cover for outpatient physiotherapy and pre-admission investigations is far less common. Only your insurer can confirm what applies to you, in writing, before admission.</p>
+
+      <p><strong>Why are the cost ranges on this page so wide?</strong><br/>Because hospital tier, room category, surgeon and anaesthesia fees, implant use and length of stay each move the total substantially, and they compound. A narrow figure published on a website would be misleading. A meaningful number can only come from an itemised hospital estimate for a specific recommended procedure.</p>
+
+      <p><strong>Is an epidural injection cheaper than surgery?</strong><br/>Substantially, yes. But it addresses inflammation around an irritated nerve rather than the mechanical problem, and its role is to create a window in which rehabilitation becomes possible. It is a step within conservative care, not a discount version of an operation.</p>
+
+      <p><strong>My MRI says disc bulge. Do I need surgery?</strong><br/>Almost certainly not on that basis alone. Disc bulges are extremely common findings, including in people with no symptoms whatsoever. Surgery is guided by your neurological examination, the pattern and duration of your symptoms, and your response to conservative care &mdash; not by the wording of a radiology report.</p>
+
+      <p><strong>Should I get a second opinion?</strong><br/>Yes, particularly if fusion has been proposed, if surgery has been recommended at a first visit without a trial of conservative care, or if the recommendation is for back pain rather than clear nerve-related leg symptoms. A second opinion costs the price of one consultation and is the highest-value spend on this entire page.</p>
+
+      <h2>The bottom line</h2>
+
+      <p>The cost of slipped disc treatment in Bengaluru spans a very wide band, from a few thousand rupees for a properly conducted conservative episode to several lakhs for a fusion, and every figure in between depends on hospital category, room type, technique, implant use and stay. That is the honest picture, and any page offering more precision than that is offering false comfort.</p>
+
+      <p>But the more important point gets lost in cost comparisons. Most people asking this question do not end up needing the operation. A disc bulge on an MRI is not, by itself, an indication for spine surgery. Progressive nerve compromise, red-flag symptoms, or disabling nerve-related leg pain that has not responded to a fair trial of structured care &mdash; those are indications. Anatomy on a report is not.</p>
+
+      <p>If surgery has been recommended to you and something about the recommendation does not sit right, get a second opinion before you agree, and bring your scans and reports with you. Dr. Nitin N Sunku consults at Attibele and HSR Layout in Bengaluru, and an appointment can be arranged through the <a href="/book-appointment">appointment booking page</a> or the <a href="/contact">contact page</a>.</p>
+
+      <p>This article is general education about how spine treatment costs are structured in Bengaluru. Every figure is an indicative range for planning only &mdash; not a quotation, estimate or commitment of price. It does not replace an in-person clinical examination. Insurance information here is general; your own policy document and your insurer&#39;s written confirmation are the only reliable guide to your cover.</p>
+    `
+  },

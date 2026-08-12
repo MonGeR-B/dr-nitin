@@ -48,8 +48,21 @@ export function generateLeadNotificationEmail(
         leadId: escapeHtml(context?.leadId),
     };
 
+    // PAID vs ORGANIC — the flat label. Captured client-side from the click IDs
+    // (gclid/fbclid/msclkid) or a paid utm_medium on the landing URL; anything
+    // else counts as organic. Leads created before the Aug 2026 attribution
+    // rebuild have no lead_type, so we say so rather than guessing 'organic'.
+    const rawLeadType = context?.utmParams?.lead_type;
+    const leadTypeLabel =
+        rawLeadType === 'paid' ? 'PAID' : rawLeadType === 'organic' ? 'ORGANIC' : 'UNKNOWN';
+    const leadTypeColour =
+        rawLeadType === 'paid' ? '#b45309' : rawLeadType === 'organic' ? '#047857' : '#6b7280';
+    const leadTypeBg =
+        rawLeadType === 'paid' ? '#fef3c7' : rawLeadType === 'organic' ? '#d1fae5' : '#f3f4f6';
+    const channelLabel = escapeHtml(context?.utmParams?.channel);
+
     const utmEntries = context?.utmParams
-        ? Object.entries(context.utmParams).filter(([, v]) => v != null && v !== '')
+        ? Object.entries(context.utmParams).filter(([k, v]) => v != null && v !== '' && k !== 'lead_type')
         : [];
 
     const utmBlock = utmEntries.length
@@ -168,8 +181,12 @@ export function generateLeadNotificationEmail(
 
         <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
             <h3 style="color: #667eea; margin-top: 0; border-bottom: 2px solid #667eea; padding-bottom: 10px;">📊 Lead Source</h3>
+            <p style="margin: 10px 0; padding: 12px; background: ${leadTypeBg}; border-left: 4px solid ${leadTypeColour}; border-radius: 4px;">
+                <strong style="color: ${leadTypeColour}; font-size: 16px; letter-spacing: 0.5px;">${leadTypeLabel} LEAD</strong>${channelLabel ? `
+                <span style="color: #555; font-size: 13px;"> &middot; ${channelLabel}</span>` : ''}
+            </p>
             <p style="margin: 10px 0; padding: 10px; background: #f0f4ff; border-left: 4px solid #667eea; border-radius: 4px;">
-                <strong>Source:</strong> ${safe.source}
+                <strong>Landing page:</strong> ${safe.source}
             </p>
             ${safe.submittedAt ? `
             <p style="margin: 10px 0; color: #666; font-size: 14px;">
@@ -224,7 +241,8 @@ ${lead.message ? `\nAdditional Information:\n${lead.message}` : ''}
 
 Lead Source:
 -----------
-Source: ${lead.source || 'website'}
+Lead Type: ${leadTypeLabel}${context?.utmParams?.channel ? ` (${context.utmParams.channel})` : ''}
+Landing page: ${lead.source || 'website'}
 ${lead.submittedAt ? `Submitted at: ${new Date(lead.submittedAt).toLocaleString()}` : ''}
 ${utmText}${contextText}
 ACTION REQUIRED: Please contact this lead within 24 hours for best conversion rates.

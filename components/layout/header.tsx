@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Stethoscope, Mail, MapPin } from "lucide-react";
+import { Menu, X, Phone, Stethoscope, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/data";
+import {
+    CONDITION_LINKS,
+    PROCEDURE_LINKS,
+    LOCATION_LINKS,
+} from "@/lib/landing-links";
 
 // Awards & Publications intentionally live in the footer (Quick Links) rather
 // than the primary header nav, to keep the top navigation focused.
@@ -20,6 +25,19 @@ const navigation = [
     { name: "Team", href: "/team" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
+];
+
+/**
+ * "Conditions" mega-menu. Added Aug 2026 — before this, the 15+ root-level
+ * money pages (/knee-pain-bangalore, /knee-replacement-cost-bangalore, the geo
+ * pages, …) were linked from `app/sitemap.ts` and nowhere else, so they had no
+ * internal crawl path and received no link equity from the rest of the site.
+ * Source of truth is `lib/landing-links.ts`.
+ */
+const megaMenu: { heading: string; links: { label: string; href: string }[] }[] = [
+    { heading: "Conditions", links: CONDITION_LINKS },
+    { heading: "Procedures & Costs", links: PROCEDURE_LINKS },
+    { heading: "Locations", links: LOCATION_LINKS },
 ];
 
 export function Header() {
@@ -79,26 +97,67 @@ export function Header() {
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex lg:items-center lg:gap-x-0.5 xl:gap-x-1">
                         {navigation.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className={cn(
-                                    "relative whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
-                                    isActive(item.href)
-                                        ? "text-white bg-blue-800"
-                                        : "text-blue-50 hover:text-white hover:bg-blue-700"
-                                )}
-                            >
-                                {item.name}
-                                <span
+                            <Fragment key={item.name}>
+                                <Link
+                                    href={item.href}
                                     className={cn(
-                                        "absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 transition-all duration-300",
+                                        "relative whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
                                         isActive(item.href)
-                                            ? "w-3/4"
-                                            : "w-0 group-hover:w-3/4"
+                                            ? "text-white bg-blue-800"
+                                            : "text-blue-50 hover:text-white hover:bg-blue-700"
                                     )}
-                                />
-                            </Link>
+                                >
+                                    {item.name}
+                                    <span
+                                        className={cn(
+                                            "absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 transition-all duration-300",
+                                            isActive(item.href)
+                                                ? "w-3/4"
+                                                : "w-0 group-hover:w-3/4"
+                                        )}
+                                    />
+                                </Link>
+
+                                {/* Conditions mega-menu sits directly after Treatments.
+                                    CSS-only (group-hover + focus-within) so it needs no
+                                    extra state and degrades to a plain link list without JS. */}
+                                {item.name === "Treatments" && (
+                                    <div className="relative group/mega">
+                                        <button
+                                            type="button"
+                                            aria-haspopup="true"
+                                            className="relative inline-flex items-center gap-1 whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold rounded-lg text-blue-50 hover:text-white hover:bg-blue-700 transition-all duration-200"
+                                        >
+                                            Conditions
+                                            <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover/mega:rotate-180" />
+                                        </button>
+
+                                        <div className="invisible opacity-0 group-hover/mega:visible group-hover/mega:opacity-100 focus-within:visible focus-within:opacity-100 transition-all duration-150 absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50">
+                                            <div className="w-[46rem] rounded-2xl bg-white shadow-2xl ring-1 ring-black/5 p-6 grid grid-cols-3 gap-6">
+                                                {megaMenu.map(({ heading, links }) => (
+                                                    <div key={heading}>
+                                                        <p className="text-[11px] font-bold uppercase tracking-widest text-blue-700 mb-3">
+                                                            {heading}
+                                                        </p>
+                                                        <ul className="space-y-1.5">
+                                                            {links.map((l) => (
+                                                                <li key={l.href}>
+                                                                    <Link
+                                                                        href={l.href}
+                                                                        className="block text-[13px] leading-snug text-gray-700 hover:text-blue-700 transition-colors"
+                                                                    >
+                                                                        {l.label}
+                                                                    </Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </Fragment>
                         ))}
                     </div>
 
@@ -167,6 +226,28 @@ export function Header() {
                                     </Link>
                                 ))}
                             </div>
+
+                            {/* Money-page links on mobile. Same crawl-path rationale as the
+                                desktop mega-menu — see lib/landing-links.ts. */}
+                            {megaMenu.map(({ heading, links }) => (
+                                <div key={heading} className="py-6 space-y-3">
+                                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                                        {heading}
+                                    </h3>
+                                    <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+                                        {links.map((l) => (
+                                            <Link
+                                                key={l.href}
+                                                href={l.href}
+                                                className="block rounded-lg py-1.5 text-sm text-gray-700 hover:text-primary transition-colors"
+                                                onClick={() => setMobileMenuOpen(false)}
+                                            >
+                                                {l.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
 
                             {/* Contact Info */}
                             <div className="py-6 space-y-4">
