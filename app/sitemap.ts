@@ -7,7 +7,7 @@ import { siteOrigin } from '@/lib/site-url'
 // used `new Date()`, so every build claimed the entire site had just changed —
 // Google learns to distrust and ignore lastmod when it's always "now".
 // Bump this date only when site-wide content genuinely changes.
-const SITE_CONTENT_UPDATED = new Date('2026-08-04')
+const SITE_CONTENT_UPDATED = new Date('2026-08-12')
 
 /** Parse blog-post display dates like "Mar 2, 2026"; fall back to the site date. */
 function postDate(dateStr?: string): Date {
@@ -84,6 +84,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // regions with orphaned blog clusters and no commercial page until now.
         { path: '/slip-disc-treatment-bangalore', priority: 0.8 },
         { path: '/foot-ankle-pain-bangalore', priority: 0.8 },
+        // Aug 12 2026 batch. Four money pages chosen because their page-one
+        // SERPs are made up of individual-surgeon sites rather than hospital
+        // chains or aggregators, and because each closes an orphaned blog
+        // cluster that previously funnelled nowhere.
+        //  - PRP hub: 13 regenerative posts had no commercial parent; the four
+        //    /treatments/* pages it links down to are all knee-scoped.
+        //  - Hip cost: sibling of /knee-replacement-cost-bangalore; 3 hip cost
+        //    posts were orphaned. PRICING IS UNVERIFIED — see TODO-VERIFY-PRICING.
+        //  - Knee arthroscopy: procedure page, deliberately distinct from the
+        //    condition framing of /services/meniscal-care and /services/acl-care.
+        //  - Frozen shoulder: child of /shoulder-pain-bangalore, diabetes angle.
+        { path: '/prp-regenerative-treatment-bangalore', priority: 0.8 },
+        { path: '/hip-replacement-cost-bangalore', priority: 0.8 },
+        { path: '/knee-arthroscopy-bangalore', priority: 0.8 },
+        { path: '/frozen-shoulder-treatment-bangalore', priority: 0.8 },
         { path: '/privacy-policy', priority: 0.3 },
         { path: '/terms', priority: 0.3 },
     ]

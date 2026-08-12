@@ -307,7 +307,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 </span>
 
                                 <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-4 break-words">
-                                    <span className="block">Trusted Orthopedic Doctor</span>
+                                    <span className="block">Trusted Orthopedic Doctor{" "}</span>
                                     <span className="block bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1">
                                         in HSR Layout
                                     </span>

@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail } from "lucide-react";
 import { CLINICS, PRACTICE_EMAIL } from "@/lib/practice";
+import {
+    CONDITION_LINKS,
+    PROCEDURE_LINKS,
+    LOCATION_LINKS,
+} from "@/lib/landing-links";
 
 export function Footer() {
     return (
@@ -64,6 +69,51 @@ export function Footer() {
                                 <Mail className="h-5 w-5 text-orange-400" />
                                 <span className="text-blue-100">{PRACTICE_EMAIL}</span>
                             </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Money-page link block. Added Aug 2026: the root-level landing pages
+                    (/knee-pain-bangalore, /knee-replacement-cost-bangalore, the geo pages…)
+                    previously appeared only in app/sitemap.ts and had no internal crawl
+                    path at all. Source of truth: lib/landing-links.ts. */}
+                <div className="border-t border-blue-700 pt-10 mb-12 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <div className="lg:col-span-2">
+                        <h4 className="text-lg font-bold text-white mb-6">Conditions We Treat</h4>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
+                            {CONDITION_LINKS.map((l) => (
+                                <li key={l.href}>
+                                    <Link href={l.href} className="text-sm text-blue-100 hover:text-orange-400 transition-colors">
+                                        {l.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-6">Procedures &amp; Costs</h4>
+                        <ul className="space-y-2.5">
+                            {PROCEDURE_LINKS.map((l) => (
+                                <li key={l.href}>
+                                    <Link href={l.href} className="text-sm text-blue-100 hover:text-orange-400 transition-colors">
+                                        {l.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-6">Locations</h4>
+                        <ul className="space-y-2.5">
+                            {LOCATION_LINKS.map((l) => (
+                                <li key={l.href}>
+                                    <Link href={l.href} className="text-sm text-blue-100 hover:text-orange-400 transition-colors">
+                                        {l.label}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>

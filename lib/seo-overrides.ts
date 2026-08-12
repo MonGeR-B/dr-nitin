@@ -22,6 +22,37 @@ export interface SeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+    // --- Aug 12, 2026 knowledge batch ---
+    "steroid-injection-vs-prp-for-joint-pain": {
+        title: "Steroid Injection vs PRP: Which One, and When",
+        description:
+            "How a corticosteroid injection and PRP actually differ \u2014 speed of relief, side effects, the blood-sugar rise in diabetics, repeat limits, cost, and the joints where neither is the right answer.",
+    },
+    "how-long-does-a-knee-or-hip-replacement-last": {
+        title: "How Long Does a Knee or Hip Replacement Last?",
+        description:
+            "Honest implant survivorship, why younger and heavier patients wear implants out faster, what actually causes failure, and what you can influence \u2014 including whether you are too young for surgery.",
+    },
+    "do-i-need-a-knee-arthroscopy-mri-vs-symptoms": {
+        title: "Do I Need a Knee Arthroscopy? MRI vs Symptoms",
+        description:
+            "Degenerative meniscal tears are common incidental MRI findings. Which symptom patterns genuinely predict benefit from a knee scope, which do not, and what to ask before consenting.",
+    },
+    "frozen-shoulder-and-diabetes": {
+        title: "Frozen Shoulder and Diabetes: What Changes",
+        description:
+            "Why adhesive capsulitis is more common, more severe and slower to settle in people with diabetes, why an unexplained frozen shoulder warrants a blood-sugar check, and how treatment differs.",
+    },
+    "how-cashless-preauthorisation-works-orthopedic-surgery": {
+        title: "How Cashless Pre-Authorisation Works for Surgery",
+        description:
+            "A step-by-step guide to orthopedic cashless claims \u2014 the pre-auth form, documents, turnaround, room-rent proportionate deduction, common denial reasons, and a pre-admission checklist.",
+    },
+    "vitamin-d-and-calcium-deficiency-bone-health-india": {
+        title: "Vitamin D & Calcium Deficiency in Indian Adults",
+        description:
+            "Why deficiency is so common in India despite the sunlight, which symptoms are genuinely attributable, who should actually be tested, and realistic dietary calcium sources for Indian diets.",
+    },
     "slip-disc-surgery-cost-in-bangalore": {
         title: "Slip Disc Surgery Cost in Bangalore (2026 Ranges)",
         description:
