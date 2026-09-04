@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
     Phone,
     MapPin,
@@ -14,6 +15,11 @@ import { TrackedCall } from "@/components/analytics/tracked-call";
 import { TrackedWhatsApp } from "@/components/analytics/tracked-whatsapp";
 import { FadeIn } from "@/components/animations/fade-in";
 import type { Clinic } from "@/lib/practice";
+import {
+    CONDITION_LINKS,
+    PROCEDURE_LINKS,
+    LOCATION_LINKS,
+} from "@/lib/landing-links";
 
 /**
  * Shared design-system chrome for the conversion landing pages.
@@ -565,9 +571,87 @@ export function MobileStickyCTA({ clinic }: { clinic: Clinic }) {
 }
 
 /* ----------------------------- FOOTER ----------------------------- */
-export function LandingFooter({ clinic }: { clinic: Clinic }) {
+/**
+ * Landing-page footer.
+ *
+ * The link grid is the ONLY crawl path out of a landing page — these pages
+ * render `<HideNavigation />`, so the global header and footer are hidden.
+ * Before Aug 2026 this footer had no links at all and every money page was a
+ * dead end. Do not remove the grid.
+ *
+ * `currentPath` suppresses the self-link so a page never links to itself.
+ * `showLinks={false}` is available for a page that must stay a pure
+ * conversion funnel, but the default is on and should stay on.
+ */
+export function LandingFooter({
+    clinic,
+    currentPath,
+    showLinks = true,
+}: {
+    clinic: Clinic;
+    currentPath?: string;
+    showLinks?: boolean;
+}) {
+    const columns: { heading: string; links: { label: string; href: string }[] }[] = [
+        { heading: "Conditions We Treat", links: CONDITION_LINKS },
+        { heading: "Procedures & Costs", links: PROCEDURE_LINKS },
+        { heading: "Clinic Locations", links: LOCATION_LINKS },
+    ];
+
     return (
         <footer className="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+            {showLinks && (
+                <div className="container mx-auto px-4 max-w-6xl mb-10 text-left">
+                    <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
+                        Explore Orthopedic Care
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {columns.map(({ heading, links }) => (
+                            <div key={heading}>
+                                <h2 className="text-sm font-bold text-white mb-3">{heading}</h2>
+                                <ul className="space-y-2">
+                                    {links
+                                        .filter((l) => l.href !== currentPath)
+                                        .map((l) => (
+                                            <li key={l.href}>
+                                                <Link
+                                                    href={l.href}
+                                                    className="text-[13px] text-gray-400 hover:text-white transition-colors"
+                                                >
+                                                    {l.label}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                </ul>
+                            </div>
+                        ))}
+                        <div>
+                            <h2 className="text-sm font-bold text-white mb-3">More</h2>
+                            <ul className="space-y-2">
+                                {[
+                                    { label: "About Dr. Nitin", href: "/about" },
+                                    { label: "All Services", href: "/services" },
+                                    { label: "All Treatments", href: "/treatments" },
+                                    { label: "Patient Stories", href: "/testimonials" },
+                                    { label: "Blog", href: "/blog" },
+                                    { label: "Book Appointment", href: "/book-appointment" },
+                                    { label: "Contact", href: "/contact" },
+                                ].map((l) => (
+                                    <li key={l.href}>
+                                        <Link
+                                            href={l.href}
+                                            className="text-[13px] text-gray-400 hover:text-white transition-colors"
+                                        >
+                                            {l.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             <div className="container mx-auto px-4 max-w-3xl">
                 <div className="flex items-center justify-center gap-2 mb-3">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">

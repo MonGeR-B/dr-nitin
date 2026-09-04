@@ -15,6 +15,7 @@ import {
 } from "@/lib/practice";
 import { siteOrigin } from "@/lib/site-url";
 import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
+import { UtmCapture } from "@/components/analytics/utm-capture";
 import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -159,6 +160,10 @@ export default function RootLayout({
       </head>
       <body className={cn(inter.variable, poppins.variable, "font-sans bg-background text-text-primary")}>
         <JsonLd data={organizationSchema} />
+        {/* Captures acquisition context (gclid/fbclid/utm/referrer) on the first page
+            of the session. Previously this only ran on landing pages, so leads from
+            blog posts and /book-appointment arrived with no attribution at all. */}
+        <UtmCapture />
         <Header />
         {children}
         <Footer />

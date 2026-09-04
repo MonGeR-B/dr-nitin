@@ -32,6 +32,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     keywords: ["knee-replacement", "total-knee", "titanium", "johnson", "ceramic"],
     links: [
       { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
+      { label: "How long does a knee or hip replacement last?", href: "/blog/how-long-does-a-knee-or-hip-replacement-last" },
       { label: "Types of total knee replacement explained", href: "/blog/types-of-total-knee-replacement" },
       { label: "Knee Replacement service", href: "/services/knee-replacement" },
       { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
@@ -48,8 +49,10 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["meniscus", "meniscal", "bucket-handle"],
+    keywords: ["meniscus", "meniscal", "bucket-handle", "arthroscopy-knee", "knee-arthroscopy"],
     links: [
+      { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
+      { label: "Do I need a knee arthroscopy? MRI vs symptoms", href: "/blog/do-i-need-a-knee-arthroscopy-mri-vs-symptoms" },
       { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
       { label: "Meniscus tear surgery recovery time", href: "/blog/meniscus-tear-surgery-recovery-time" },
       { label: "Meniscal Care service", href: "/services/meniscal-care" },
@@ -57,9 +60,10 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["shoulder", "rotator-cuff", "arthroscopy-shoulder"],
+    keywords: ["shoulder", "rotator-cuff", "arthroscopy-shoulder", "frozen-shoulder", "slap-tear"],
     links: [
       { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
+      { label: "Frozen shoulder treatment in Bangalore", href: "/frozen-shoulder-treatment-bangalore" },
       { label: "Rotator cuff injury: how to treat shoulder pain", href: "/blog/rotator-cuff-injury-heres-how-to-treat-shoulder-pain-effectively" },
       { label: "When is shoulder replacement needed?", href: "/blog/when-is-shoulder-replacement-surgery-needed" },
       { label: "Shoulder Care service", href: "/services/shoulder-care" },
@@ -67,8 +71,10 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["prp", "gfc", "regenerative", "injection", "hyaluronic", "red-light", "natural-alternatives"],
+    keywords: ["prp", "gfc", "regenerative", "injection", "hyaluronic", "red-light", "natural-alternatives", "steroid"],
     links: [
+      { label: "PRP & regenerative treatment in Bangalore", href: "/prp-regenerative-treatment-bangalore" },
+      { label: "Steroid injection vs PRP: which one, and when", href: "/blog/steroid-injection-vs-prp-for-joint-pain" },
       { label: "PRP & GFC injection cost and eligibility", href: "/blog/prp-gfc-injection-cost-eligibility-bangalore" },
       { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
       { label: "GFC treatment for knee pain", href: "/treatments/gfc-treatment-knee-pain" },
@@ -88,6 +94,8 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["sports", "shin-splints", "achilles", "tendon", "tendinopathy", "tendonitis", "rehabilitation", "ankle", "elbow"],
     links: [
+      { label: "Foot, heel & ankle pain specialist in Bangalore", href: "/foot-ankle-pain-bangalore" },
+      { label: "Why does my heel hurt in the morning?", href: "/blog/why-does-my-heel-hurt-in-the-morning" },
       { label: "Sports Medicine service", href: "/services/sports-medicine" },
       { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
       { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
@@ -97,6 +105,8 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
     keywords: ["spine", "posture", "herniated-disc", "back", "neck", "cervical"],
     links: [
+      { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+      { label: "How long does a slipped disc take to heal?", href: "/blog/how-long-does-a-slipped-disc-take-to-heal" },
       { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
       { label: "Spine Care service", href: "/services/spine-care" },
       { label: "How posture affects spine and joint health", href: "/blog/how-posture-affects-spine-and-joint-health" },
@@ -105,9 +115,29 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
+    keywords: ["vitamin-d", "calcium", "bone-health", "osteoporosis", "stress-fracture", "fracture"],
+    links: [
+      { label: "Vitamin D & calcium deficiency in Indian adults", href: "/blog/vitamin-d-and-calcium-deficiency-bone-health-india" },
+      { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+      { label: "Bone Fracture service", href: "/services/bone-fracture" },
+      { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
+    ],
+  },
+  {
+    keywords: ["insurance", "cashless", "cost", "preauthorisation", "claim"],
+    links: [
+      { label: "How cashless pre-authorisation actually works", href: "/blog/how-cashless-preauthorisation-works-orthopedic-surgery" },
+      { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+      { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
+      { label: "Hip replacement cost in Bangalore (2026 guide)", href: "/hip-replacement-cost-bangalore" },
+    ],
+  },
+  {
     keywords: ["hip"],
     links: [
       { label: "Hip pain specialist in Bangalore", href: "/hip-pain-bangalore" },
+      { label: "Hip replacement cost in Bangalore (2026 guide)", href: "/hip-replacement-cost-bangalore" },
+      { label: "How long does a knee or hip replacement last?", href: "/blog/how-long-does-a-knee-or-hip-replacement-last" },
       { label: "Hip Replacement service", href: "/services/hip-replacement" },
       { label: "Natural alternatives to hip replacement", href: "/blog/natural-alternatives-to-hip-replacement" },
       { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
@@ -129,6 +159,78 @@ const GENERIC_LINKS: InternalLink[] = [
  * first; topical fallbacks fill any remaining slots up to 3–5 total.
  */
 const CURATED_LINKS: Record<string, InternalLink[]> = {
+  // --- Aug 12, 2026 knowledge batch. Each post is written to feed one of the
+  // four new money pages; these curated links make that funnel explicit. ---
+  "steroid-injection-vs-prp-for-joint-pain": [
+    { label: "PRP & regenerative treatment in Bangalore", href: "/prp-regenerative-treatment-bangalore" },
+    { label: "Ultrasound-guided orthopedic injections", href: "/treatments/ultrasound-guided-orthopedic-injections" },
+    { label: "PRP vs GFC for knee pain", href: "/blog/prp-vs-gfc-for-knee-pain" },
+    { label: "PRP & GFC injection cost and eligibility", href: "/blog/prp-gfc-injection-cost-eligibility-bangalore" },
+    { label: "Arthritis treatment in Bangalore", href: "/arthritis-treatment-bangalore" },
+  ],
+  "how-long-does-a-knee-or-hip-replacement-last": [
+    { label: "Hip replacement cost in Bangalore (2026 guide)", href: "/hip-replacement-cost-bangalore" },
+    { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
+    { label: "Revision knee replacement surgery", href: "/blog/revision-knee-replacement-surgery-india" },
+    { label: "Hip resurfacing vs total hip replacement", href: "/blog/hip-resurfacing-vs-total-hip-replacement" },
+    { label: "How obesity affects joint health", href: "/blog/how-does-obesity-affect-joint-health" },
+  ],
+  "do-i-need-a-knee-arthroscopy-mri-vs-symptoms": [
+    { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
+    { label: "Asymptomatic meniscus tear", href: "/blog/asymptomatic-meniscus-tear" },
+    { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
+    { label: "Meniscal Care service", href: "/services/meniscal-care" },
+    { label: "Knee pain specialist in Bangalore", href: "/knee-pain-bangalore" },
+  ],
+  "frozen-shoulder-and-diabetes": [
+    { label: "Frozen shoulder treatment in Bangalore", href: "/frozen-shoulder-treatment-bangalore" },
+    { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
+    { label: "Frozen shoulder treatment without surgery", href: "/blog/frozen-shoulder-treatment-without-surgery-india" },
+    { label: "Shoulder pain injections: precision care", href: "/blog/shoulder-pain-injections-precision-care" },
+    { label: "Shoulder Care service", href: "/services/shoulder-care" },
+  ],
+  "how-cashless-preauthorisation-works-orthopedic-surgery": [
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+    { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
+    { label: "Hip replacement cost in Bangalore (2026 guide)", href: "/hip-replacement-cost-bangalore" },
+    { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+  ],
+  "vitamin-d-and-calcium-deficiency-bone-health-india": [
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "Arthritis treatment in Bangalore", href: "/arthritis-treatment-bangalore" },
+    { label: "Stress fracture treatment, symptoms & recovery", href: "/blog/stress-fracture-treatment-symptoms-causes-recovery" },
+    { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
+    { label: "Children's orthopedic care in Bangalore", href: "/pediatric-orthopedic-bangalore" },
+  ],
+  "slip-disc-surgery-cost-in-bangalore": [
+    { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+    { label: "How long does a slipped disc take to heal?", href: "/blog/how-long-does-a-slipped-disc-take-to-heal" },
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+    { label: "Lumbar disc herniation surgery in India", href: "/blog/lumbar-disc-herniation-surgery-india" },
+    { label: "Back pain specialist in Bangalore", href: "/back-pain-bangalore" },
+  ],
+  "how-long-does-a-slipped-disc-take-to-heal": [
+    { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+    { label: "Slip disc surgery cost in Bangalore", href: "/blog/slip-disc-surgery-cost-in-bangalore" },
+    { label: "Sciatica treatment without surgery", href: "/blog/sciatica-treatment-without-surgery-india" },
+    { label: "Lower back pain physiotherapy protocol", href: "/blog/lower-back-pain-physiotherapy-protocol-india" },
+    { label: "Back pain specialist in Bangalore", href: "/back-pain-bangalore" },
+  ],
+  "why-does-my-heel-hurt-in-the-morning": [
+    { label: "Foot, heel & ankle pain specialist in Bangalore", href: "/foot-ankle-pain-bangalore" },
+    { label: "Phases of Achilles tendinopathy", href: "/blog/phases-of-achilles-tendinopathy" },
+    { label: "Stress fracture treatment, symptoms and recovery", href: "/blog/stress-fracture-treatment-symptoms-causes-recovery" },
+    { label: "Ultrasound-guided orthopedic injections", href: "/treatments/ultrasound-guided-orthopedic-injections" },
+    { label: "Sports injury doctor in Bangalore", href: "/sports-injury-doctor-bangalore" },
+  ],
+  "desk-job-back-and-neck-pain-bangalore-it-professionals": [
+    { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
+    { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+    { label: "Orthopedic doctor near Electronic City", href: "/orthopedic-doctor-electronic-city" },
+    { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
+    { label: "How posture affects spine and joint health", href: "/blog/how-posture-affects-spine-and-joint-health" },
+  ],
   "best-orthopedic-surgeon-in-attibele": [
     { label: "Knee replacement cost in Bangalore", href: "/knee-replacement-cost-bangalore" },
     { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
